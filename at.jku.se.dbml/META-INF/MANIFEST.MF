@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: at.jku.se.dbml
+Bundle-ManifestVersion: 2
+Bundle-Name: at.jku.se.dbml
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: at.jku.se.dbml; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase,
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib;bundle-version="2.14.0",
+ org.eclipse.xtext.util,
+ org.eclipse.emf.common,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)",
+ org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: at.jku.se.dbml.serializer,
+ at.jku.se.dbml.parser.antlr.internal,
+ at.jku.se.dbml.services,
+ at.jku.se.dbml.dBML,
+ at.jku.se.dbml.scoping,
+ at.jku.se.dbml,
+ at.jku.se.dbml.parser.antlr,
+ at.jku.se.dbml.dBML.impl,
+ at.jku.se.dbml.validation,
+ at.jku.se.dbml.dBML.util,
+ at.jku.se.dbml.generator
+Import-Package: org.apache.log4j,
+ org.module.eer.mm.moduleeer
