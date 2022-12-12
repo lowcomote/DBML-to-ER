@@ -1,0 +1,144 @@
+Table "comfy_cms_sites" {
+  "id" INT [pk, not null, increment]
+  "label" VARCHAR(255) [not null]
+  "identifier" VARCHAR(255) [not null]
+  "hostname" VARCHAR(255) [not null]
+  "path" VARCHAR(255)
+  "locale" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+}
+
+Table "comfy_cms_layouts" {
+  "id" INT [pk, not null, increment]
+  "site_id" INT
+  "parent_id" INT
+  "app_layout" VARCHAR(255) [not null]
+  "label" VARCHAR(255) [not null]
+  "identifier" VARCHAR(255) [not null]
+  "content" TEXT
+  "css" TEXT
+  "js" TEXT
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+}
+
+Table "comfy_cms_pages" {
+  "id" INT [pk, not null, increment]
+  "site_id" INT [not null]
+  "layout_id" INT
+  "parent_id" INT
+  "target_page_id" INT
+  "label" VARCHAR(255) [not null]
+  "slug" VARCHAR(255)
+  "full_path" VARCHAR(255) [not null]
+  "content_cache" TEXT [not null]
+  "position" INT [not null]
+  "children_count" INT [not null]
+  "is_published" TINYINT(1) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+}
+
+Table "comfy_cms_translations" {
+  "id" INT [pk, not null, increment]
+  "locale" VARCHAR(255) [not null]
+  "page_id" INT [not null]
+  "layout_id" INT
+  "label" INT [not null]
+  "content_cache" TEXT [not null]
+  "is_published" TINYINT(1) [not null]
+  "updated_at" DATETIME [not null]
+  "created_at" DATETIME [not null]
+}
+
+Table "comfy_cms_fragments" {
+  "id" INT [pk, not null, increment]
+  "recordable_id" INT [not null]
+  "recordable_type" VARCHAR(255) [not null]
+  "identifier" VARCHAR(255) [not null]
+  "tag" VARCHAR(255) [not null]
+  "content" TEXT [not null]
+  "boolean" TINYINT(1) [not null]
+  "datetime" DATETIME [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+}
+
+Table "comfy_cms_snippets" {
+  "id" INT [pk, not null, increment]
+  "site_id" VARCHAR(255) [not null]
+  "label" VARCHAR(255) [not null]
+  "identifier" VARCHAR(255) [not null]
+  "content" TEXT [not null]
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" BIGINT [not null]
+}
+
+Table "comfy_cms_files" {
+  "id" INT [pk, not null, increment]
+  "site_id" INT [not null]
+  "label" VARCHAR(255) [not null]
+  "description" TEXT [not null]
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "udpated_at" DATETIME [not null]
+}
+
+Table "comfy_cms_revisions" {
+  "id" INT [pk, not null, increment]
+  "record_type" VARCHAR(255) [not null]
+  "record_id" INT [not null]
+  "data" TEXT
+  "created_at" DATETIME [not null]
+}
+
+Table "comfy_cms_categories" {
+  "id" INT [pk, not null, increment]
+  "site_id" INT [not null]
+  "label" VARCHAR(255) [not null]
+  "categorized_type" VARCHAR(255) [not null]
+}
+
+Table "comfy_cms_categorizations" {
+  "id" INT [pk, not null, increment]
+  "category_id" INT [not null]
+  "categorized_type" VARCHAR(255) [not null]
+  "categorized_id" INT [not null]
+}
+
+Ref:"comfy_cms_sites"."id" < "comfy_cms_layouts"."site_id"
+
+Ref:"comfy_cms_sites"."id" < "comfy_cms_snippets"."site_id"
+
+Ref:"comfy_cms_sites"."id" < "comfy_cms_files"."site_id"
+
+Ref:"comfy_cms_layouts"."id" < "comfy_cms_layouts"."parent_id"
+
+Ref:"comfy_cms_layouts"."id" < "comfy_cms_revisions"."record_id"
+
+Ref:"comfy_cms_pages"."id" < "comfy_cms_pages"."parent_id"
+
+Ref:"comfy_cms_pages"."id" < "comfy_cms_revisions"."record_id"
+
+Ref:"comfy_cms_sites"."id" < "comfy_cms_pages"."site_id"
+
+Ref:"comfy_cms_layouts"."id" < "comfy_cms_pages"."layout_id"
+
+Ref:"comfy_cms_pages"."id" < "comfy_cms_translations"."page_id"
+
+Ref:"comfy_cms_layouts"."id" < "comfy_cms_translations"."layout_id"
+
+Ref:"comfy_cms_snippets"."id" < "comfy_cms_revisions"."record_id"
+
+Ref:"comfy_cms_snippets"."id" < "comfy_cms_categorizations"."categorized_id"
+
+Ref:"comfy_cms_files"."id" < "comfy_cms_categorizations"."categorized_id"
+
+Ref:"comfy_cms_categories"."id" < "comfy_cms_categorizations"."category_id"
+
+Ref:"comfy_cms_sites"."id" < "comfy_cms_categories"."site_id"
+
+Ref:"comfy_cms_pages"."id" < "comfy_cms_categorizations"."categorized_id"

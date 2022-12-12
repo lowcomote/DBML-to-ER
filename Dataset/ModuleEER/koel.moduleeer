@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="users" links="//@modules.0/@modularizableElements.9/@linksToEntities.0 //@modules.0/@modularizableElements.10/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_admin" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="preferences"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="remember_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="password_resets">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="artists" links="//@modules.0/@modularizableElements.11/@linksToEntities.0 //@modules.0/@modularizableElements.15/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="image"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="albums" links="//@modules.0/@modularizableElements.11/@linksToEntities.1 //@modules.0/@modularizableElements.12/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="artist_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cover"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="songs" links="//@modules.0/@modularizableElements.12/@linksToEntities.1 //@modules.0/@modularizableElements.13/@linksToEntities.0 //@modules.0/@modularizableElements.14/@linksToEntities.0 //@modules.0/@modularizableElements.15/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="album_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="artist_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="length"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="track" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="disc" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lyrics"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="mtime" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="playlists" links="//@modules.0/@modularizableElements.9/@linksToEntities.1 //@modules.0/@modularizableElements.16/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="rules"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="interactions" links="//@modules.0/@modularizableElements.10/@linksToEntities.1 //@modules.0/@modularizableElements.13/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="song_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="liked" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="play_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="playlist_song" links="//@modules.0/@modularizableElements.14/@linksToEntities.1 //@modules.0/@modularizableElements.16/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="playlist_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="song_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="settings">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - playlists:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - interactions:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="artists:id - albums:artist_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="albums:id - songs:album_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="songs:id - interactions:song_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="songs:id - playlist_song:song_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="artists:id - songs:artist_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="playlists:id - playlist_song:playlist_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

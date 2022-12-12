@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_statuses" links="//@modules.0/@modularizableElements.10/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="color" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_priorities" links="//@modules.0/@modularizableElements.9/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="color" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_categories" links="//@modules.0/@modularizableElements.12/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="color" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_categories_users" links="//@modules.0/@modularizableElements.16/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit" links="//@modules.0/@modularizableElements.9/@linksToEntities.1 //@modules.0/@modularizableElements.10/@linksToEntities.1 //@modules.0/@modularizableElements.11/@linksToEntities.1 //@modules.0/@modularizableElements.12/@linksToEntities.1 //@modules.0/@modularizableElements.13/@linksToEntities.0 //@modules.0/@modularizableElements.14/@linksToEntities.0 //@modules.0/@modularizableElements.15/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subject"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="html"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="priority_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="agent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="completed_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_comments" links="//@modules.0/@modularizableElements.13/@linksToEntities.1 //@modules.0/@modularizableElements.17/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ticket_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content2"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="html"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_audits" links="//@modules.0/@modularizableElements.14/@linksToEntities.1 //@modules.0/@modularizableElements.18/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="operation"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ticket_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="users" links="//@modules.0/@modularizableElements.11/@linksToEntities.0 //@modules.0/@modularizableElements.15/@linksToEntities.0 //@modules.0/@modularizableElements.16/@linksToEntities.0 //@modules.0/@modularizableElements.17/@linksToEntities.0 //@modules.0/@modularizableElements.18/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ticketit_admin" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ticketit_agent" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="ticketit_settings">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lang"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="default"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="ticketit_priorities:id - ticketit:priority_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="ticketit_statuses:id - ticketit:status_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - ticketit:agent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="ticketit_categories:id - ticketit:category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="ticketit:id - ticketit_comments:ticket_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="ticketit:id - ticketit_audits:ticket_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - ticketit:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - ticketit_categories_users:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - ticketit_comments:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users:id - ticketit_audits:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_agents" links="//@modules.0/@modularizableElements.39/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="browser"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="browser_version"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name_hash"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_connections">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_cookies" links="//@modules.0/@modularizableElements.41/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="uuid"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_devices" links="//@modules.0/@modularizableElements.38/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="kind"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="model"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="platform"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="platform_version"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_mobile" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_domains" links="//@modules.0/@modularizableElements.34/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_errors" links="//@modules.0/@modularizableElements.32/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="message"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_events" links="//@modules.0/@modularizableElements.25/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_events_log" links="//@modules.0/@modularizableElements.25/@linksToEntities.1 //@modules.0/@modularizableElements.26/@linksToEntities.1 //@modules.0/@modularizableElements.27/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="event_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="class_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="log_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_geoip" links="//@modules.0/@modularizableElements.42/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="latitude"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="longitude"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_code3"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="region"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="city"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="postal_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="area_code" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dma_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="metro_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="continent_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_languages" links="//@modules.0/@modularizableElements.43/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="preference"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="language_range"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_log" links="//@modules.0/@modularizableElements.27/@linksToEntities.0 //@modules.0/@modularizableElements.28/@linksToEntities.1 //@modules.0/@modularizableElements.29/@linksToEntities.1 //@modules.0/@modularizableElements.30/@linksToEntities.1 //@modules.0/@modularizableElements.31/@linksToEntities.1 //@modules.0/@modularizableElements.32/@linksToEntities.1 //@modules.0/@modularizableElements.44/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="method"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="route_path_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_ajax" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_secure" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_json" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="wants_json" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="error_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="referer_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_paths" links="//@modules.0/@modularizableElements.29/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_queries" links="//@modules.0/@modularizableElements.30/@linksToEntities.0 //@modules.0/@modularizableElements.33/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_query_arguments" links="//@modules.0/@modularizableElements.33/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="argument"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_referers" links="//@modules.0/@modularizableElements.34/@linksToEntities.1 //@modules.0/@modularizableElements.35/@linksToEntities.0 //@modules.0/@modularizableElements.40/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="domain_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="host"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="medium"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="source"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="search_terms_hash"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_referers_search_terms" links="//@modules.0/@modularizableElements.35/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="referer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="search_term"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_route_path_parameters" links="//@modules.0/@modularizableElements.36/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="route_path_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parameter"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_route_paths" links="//@modules.0/@modularizableElements.31/@linksToEntities.0 //@modules.0/@modularizableElements.36/@linksToEntities.0 //@modules.0/@modularizableElements.37/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="route_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_routes" links="//@modules.0/@modularizableElements.37/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_sessions" links="//@modules.0/@modularizableElements.28/@linksToEntities.0 //@modules.0/@modularizableElements.38/@linksToEntities.1 //@modules.0/@modularizableElements.39/@linksToEntities.1 //@modules.0/@modularizableElements.40/@linksToEntities.1 //@modules.0/@modularizableElements.41/@linksToEntities.1 //@modules.0/@modularizableElements.42/@linksToEntities.1 //@modules.0/@modularizableElements.43/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="uuid"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="device_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="agent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="client_ip"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="referer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cookie_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="geoip_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_robot" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="language_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_sql_queries" links="//@modules.0/@modularizableElements.45/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sha1"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="statement"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="connection_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_sql_queries_log" links="//@modules.0/@modularizableElements.44/@linksToEntities.1 //@modules.0/@modularizableElements.45/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="log_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sql_query_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_sql_query_bindings" links="//@modules.0/@modularizableElements.46/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sha1"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="serialized"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_sql_query_bindings_parameters" links="//@modules.0/@modularizableElements.46/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sql_query_bindings_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tracker_system_classes" links="//@modules.0/@modularizableElements.26/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_events:id - tracker_events_log:event_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_system_classes:id - tracker_events_log:class_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.24"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_log:id - tracker_events_log:log_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_sessions:id - tracker_log:session_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_paths:id - tracker_log:path_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_queries:id - tracker_log:query_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_route_paths:id - tracker_log:route_path_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_errors:id - tracker_log:error_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_queries:id - tracker_query_arguments:query_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_domains:id - tracker_referers:domain_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_referers:id - tracker_referers_search_terms:referer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_route_paths:id - tracker_route_path_parameters:route_path_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_routes:id - tracker_route_paths:route_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_devices:id - tracker_sessions:device_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_agents:id - tracker_sessions:agent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_referers:id - tracker_sessions:referer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_cookies:id - tracker_sessions:cookie_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_geoip:id - tracker_sessions:geoip_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_languages:id - tracker_sessions:language_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_log:id - tracker_sql_queries_log:log_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_sql_queries:id - tracker_sql_queries_log:sql_query_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="tracker_sql_query_bindings:id - tracker_sql_query_bindings_parameters:sql_query_bindings_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.23"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

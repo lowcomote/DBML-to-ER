@@ -1,0 +1,544 @@
+Table "access_tokens" {
+  "id" BIGINT [not null]
+  "owner_type" NVARCHAR(255)
+  "owner_id" BIGINT
+  "token" NVARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  (owner_type, owner_id) [name: "access_tokens_owner_type_owner_id_index"]
+  id [pk]
+  token [unique, name: "access_tokens_token_unique"]
+}
+}
+
+Table "account_users" {
+  "id" BIGINT [not null]
+  "account_id" INT
+  "user_id" INT
+  "role" INT
+  "inviter_id" BIGINT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  (account_id, user_id) [unique, name: "account_users_account_id_user_id_unique"]
+  id [pk]
+  account_id [name: "account_users_account_id_index"]
+  user_id [name: "account_users_user_id_index"]
+}
+}
+
+Table "accounts" {
+  "id" INT [not null]
+  "name" NVARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "locale" INT
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "active_storage_attachments" {
+  "id" BIGINT [not null]
+  "name" NVARCHAR(255) [not null]
+  "record_type" NVARCHAR(255) [not null]
+  "record_id" BIGINT [not null]
+  "blob_id" BIGINT [not null]
+  "created_at" DATETIME [not null]
+
+Indexes {
+  (name, record_type, record_id, blob_id) [unique, name: "active_storage_attachments_name_record_type_record_id_blob_id_unique"]
+  id [pk]
+  blob_id [name: "active_storage_attachments_blob_id_index"]
+}
+}
+
+Table "active_storage_blobs" {
+  "id" BIGINT [not null]
+  "key" NVARCHAR(255) [not null]
+  "filename" NVARCHAR(255) [not null]
+  "content_type" NVARCHAR(255)
+  "metadata" NVARCHAR(255)
+  "byte_size" BIGINT [not null]
+  "checksum" NVARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+
+Indexes {
+  id [pk]
+  key [unique, name: "active_storage_blobs_key_unique"]
+}
+}
+
+Table "agent_bot_inboxes" {
+  "id" BIGINT [not null]
+  "inbox_id" INT
+  "agent_bot_id" INT
+  "status" INT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "account_id" INT
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "agent_bots" {
+  "id" BIGINT [not null]
+  "name" NVARCHAR(255)
+  "description" NVARCHAR(255)
+  "outgoing_url" NVARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "attachments" {
+  "id" INT [not null]
+  "file_type" INT
+  "external_url" NVARCHAR(255)
+  "coordinates_lat" FLOAT
+  "coordinates_long" FLOAT
+  "message_id" INT [not null]
+  "account_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "fallback_title" NVARCHAR(255)
+  "extension" NVARCHAR(255)
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "canned_responses" {
+  "id" INT [not null]
+  "account_id" INT [not null]
+  "short_code" NVARCHAR(255)
+  "content" NVARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "channel_facebook_pages" {
+  "id" INT [not null]
+  "name" NVARCHAR(255) [not null]
+  "page_id" NVARCHAR(255) [not null]
+  "user_access_token" NVARCHAR(255) [not null]
+  "page_access_token" NVARCHAR(255) [not null]
+  "account_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  (page_id, account_id) [unique, name: "channel_facebook_pages_page_id_account_id_unique"]
+  id [pk]
+  page_id [name: "channel_facebook_pages_page_id_index"]
+}
+}
+
+Table "channel_twilio_sms" {
+  "id" BIGINT [not null]
+  "phone_number" NVARCHAR(255) [not null]
+  "auth_token" NVARCHAR(255) [not null]
+  "account_sid" NVARCHAR(255) [not null]
+  "account_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  (phone_number, account_id) [unique, name: "channel_twilio_sms_phone_number_account_id_unique"]
+  id [pk]
+}
+}
+
+Table "channel_twitter_profiles" {
+  "id" BIGINT [not null]
+  "name" NVARCHAR(255)
+  "profile_id" NVARCHAR(255) [not null]
+  "twitter_access_token" NVARCHAR(255) [not null]
+  "twitter_access_token_secret" NVARCHAR(255) [not null]
+  "account_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  (profile_id, account_id) [unique, name: "channel_twitter_profiles_profile_id_account_id_unique"]
+  id [pk]
+}
+}
+
+Table "channel_web_widgets" {
+  "id" INT [not null]
+  "website_name" NVARCHAR(255)
+  "website_url" NVARCHAR(255)
+  "account_id" INT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "website_token" NVARCHAR(255)
+  "widget_color" NVARCHAR(255)
+
+Indexes {
+  id [pk]
+  website_token [unique, name: "channel_web_widgets_website_token_unique"]
+}
+}
+
+Table "contact_inboxes" {
+  "id" INT [not null]
+  "contact_id" INT
+  "inbox_id" INT
+  "source_id" NVARCHAR(255) [not null]
+  "created_at" DATETIME
+  "updated_at" DATETIME
+
+Indexes {
+  (inbox_id, source_id) [unique, name: "contact_inboxes_inbox_id_source_id_unique"]
+  source_id [name: "contact_inboxes_source_id_index"]
+}
+}
+
+Table "contacts" {
+  "id" INT [not null]
+  "name" NVARCHAR(255)
+  "email" NVARCHAR(255)
+  "phone_number" NVARCHAR(255)
+  "account_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "pubsub_token" NVARCHAR(255)
+  "additional_attributes" INT
+  "identifier" NVARCHAR(255)
+  "source_id" BIGINT
+  "additional_attributes2" NVARCHAR(255)
+
+Indexes {
+  (account_id, identifier) [unique, name: "contacts_account_id_identifier_unique"]
+  (email, account_id) [unique, name: "contacts_email_account_id_unique"]
+  id [pk]
+  account_id [name: "contacts_account_id_index"]
+  pubsub_token [unique, name: "contacts_pubsub_token_unique"]
+}
+}
+
+Table "conversations" {
+  "id" INT [not null]
+  "account_id" INT [not null]
+  "inbox_id" INT [not null]
+  "status" INT [not null]
+  "assignee_id" INT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "contact_id" BIGINT
+  "display_id" INT [not null]
+  "user_last_seen_at" DATETIME
+  "agent_last_seen_at" DATETIME
+  "locked" TINYINT
+  "contact_inbox_id" INT
+  "additional_attributes" NVARCHAR(255)
+
+Indexes {
+  (account_id, display_id) [unique, name: "conversations_account_id_display_id_unique"]
+  id [pk]
+  account_id [name: "conversations_account_id_index"]
+  contact_inbox_id [name: "conversations_contact_inbox_id_index"]
+}
+}
+
+Table "events" {
+  "id" BIGINT [not null]
+  "name" NVARCHAR(255)
+  "value" FLOAT
+  "account_id" INT
+  "inbox_id" INT
+  "user_id" INT
+  "conversation_id" INT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  id [pk]
+  name [name: "events_name_index"]
+  account_id [name: "events_account_id_index"]
+  inbox_id [name: "events_inbox_id_index"]
+  user_id [name: "events_user_id_index"]
+  created_at [name: "events_created_at_index"]
+}
+}
+
+Table "inbox_members" {
+  "id" INT [not null]
+  "user_id" INT [not null]
+  "inbox_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  id [pk]
+  inbox_id [name: "inbox_members_inbox_id_index"]
+}
+}
+
+Table "inboxes" {
+  "id" INT [not null]
+  "channel_id" INT [not null]
+  "account_id" INT [not null]
+  "name" NVARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "channel_type" NVARCHAR(255)
+  "enable_auto_assignment" TINYINT
+
+Indexes {
+  id [pk]
+  account_id [name: "inboxes_account_id_index"]
+}
+}
+
+Table "messages" {
+  "id" INT [not null]
+  "content" NVARCHAR(255)
+  "account_id" INT [not null]
+  "inbox_id" INT [not null]
+  "conversation_id" INT [not null]
+  "message_type" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "private" TINYINT
+  "user_id" INT
+  "status" INT
+  "source_id" NVARCHAR(255)
+  "content_type" INT
+  "content_attributes" NVARCHAR(255)
+  "contact_id" INT
+
+Indexes {
+  id [pk]
+  account_id [name: "messages_account_id_index"]
+  inbox_id [name: "messages_inbox_id_index"]
+  conversation_id [name: "messages_conversation_id_index"]
+  user_id [name: "messages_user_id_index"]
+  source_id [name: "messages_source_id_index"]
+  contact_id [name: "messages_contact_id_index"]
+}
+}
+
+Table "notification_settings" {
+  "id" BIGINT [not null]
+  "account_id" INT
+  "user_id" INT
+  "email_flags" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  (account_id, user_id) [unique, name: "notification_settings_account_id_user_id_unique"]
+  id [pk]
+}
+}
+
+Table "subscriptions" {
+  "id" INT [not null]
+  "pricing_version" NVARCHAR(255)
+  "account_id" INT
+  "expiry" DATETIME
+  "billing_plan" NVARCHAR(255)
+  "stripe_customer_id" NVARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "state" INT
+  "payment_source_added" TINYINT
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "taggings" {
+  "id" INT [not null]
+  "tag_id" INT
+  "taggable_type" NVARCHAR(255)
+  "taggable_id" INT
+  "tagger_type" NVARCHAR(255)
+  "tagger_id" INT
+  "context" NVARCHAR(255)
+  "created_at" DATETIME
+
+Indexes {
+  (tag_id, taggable_type, taggable_id, tagger_type, tagger_id, context) [unique, name: "taggings_tag_id_taggable_type_taggable_id_tagger_type_tagger_id_context_unique"]
+  (taggable_type, taggable_id) [name: "taggings_taggable_type_taggable_id_index"]
+  (tagger_type, tagger_id) [name: "taggings_tagger_type_tagger_id_index"]
+  (taggable_type, taggable_id, context) [name: "taggings_taggable_type_taggable_id_context_index"]
+  (tagger_type, tagger_id) [name: "taggings_tagger_type_tagger_id_index"]
+  (taggable_type, taggable_id, tagger_id, context) [name: "taggings_taggable_type_taggable_id_tagger_id_context_index"]
+  id [pk]
+  tag_id [name: "taggings_tag_id_index"]
+  taggable_type [name: "taggings_taggable_type_index"]
+  taggable_id [name: "taggings_taggable_id_index"]
+  tagger_id [name: "taggings_tagger_id_index"]
+  context [name: "taggings_context_index"]
+}
+}
+
+Table "tags" {
+  "id" INT [not null]
+  "name" NVARCHAR(255)
+  "taggings_count" INT
+
+Indexes {
+  id [pk]
+  name [unique, name: "tags_name_unique"]
+}
+}
+
+Table "telegram_bots" {
+  "id" INT [not null]
+  "name" NVARCHAR(255)
+  "auth_key" NVARCHAR(255)
+  "account_id" INT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+
+Indexes {
+  id [pk]
+}
+}
+
+Table "users" {
+  "id" INT [not null]
+  "provider" NVARCHAR(255) [not null]
+  "uid" NVARCHAR(255) [not null]
+  "inviter" INT [not null]
+  "encrypted_password" NVARCHAR(255) [not null]
+  "reset_password_token" NVARCHAR(255)
+  "reset_password_sent_at" DATETIME
+  "remember_created_at" DATETIME
+  "sign_in_count" INT [not null]
+  "current_sign_in_at" DATETIME
+  "last_sign_in_at" DATETIME
+  "current_sign_in_ip" NVARCHAR(255)
+  "last_sign_in_ip" NVARCHAR(255)
+  "confirmation_token" NVARCHAR(255)
+  "confirmed_at" DATETIME
+  "confirmation_sent_at" DATETIME
+  "unconfirmed_email" NVARCHAR(255)
+  "name" NVARCHAR(255) [not null]
+  "nickname" NVARCHAR(255)
+  "email" NVARCHAR(255)
+  "tokens" NVARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "pubsub_token" NVARCHAR(255)
+
+Indexes {
+  (provider, uid) [unique, name: "users_provider_uid_unique"]
+  id [pk]
+  reset_password_token [unique, name: "users_reset_password_token_unique"]
+  email [name: "users_email_index"]
+  pubsub_token [unique, name: "users_pubsub_token_unique"]
+}
+}
+
+Table "webhooks" {
+  "id" BIGINT [not null]
+  "account_id" INT
+  "inbox_id" INT
+  "url" NVARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "webhook_type" INT
+
+Indexes {
+  (account_id, url) [unique, name: "webhooks_account_id_url_unique"]
+  id [pk]
+}
+}
+
+Ref "account_users_account_id_foreign":"accounts"."id" < "account_users"."account_id"
+
+Ref "account_users_user_id_foreign":"users"."id" < "account_users"."user_id"
+
+Ref "agent_bot_inboxes_account_id_foreign":"accounts"."id" < "agent_bot_inboxes"."account_id"
+
+Ref "attachments_account_id_foreign":"accounts"."id" < "attachments"."account_id"
+
+Ref "canned_responses_account_id_foreign":"accounts"."id" < "canned_responses"."account_id"
+
+Ref "channel_facebook_pages_account_id_foreign":"accounts"."id" < "channel_facebook_pages"."account_id"
+
+Ref "channel_twilio_sms_account_id_foreign":"accounts"."id" < "channel_twilio_sms"."account_id"
+
+Ref "channel_twitter_profiles_account_id_foreign":"accounts"."id" < "channel_twitter_profiles"."account_id"
+
+Ref "channel_web_widgets_account_id_foreign":"accounts"."id" < "channel_web_widgets"."account_id"
+
+Ref "contacts_account_id_foreign":"accounts"."id" < "contacts"."account_id"
+
+Ref "conversations_account_id_foreign":"accounts"."id" < "conversations"."account_id"
+
+Ref "events_account_id_foreign":"accounts"."id" < "events"."account_id"
+
+Ref "inboxes_account_id_foreign":"accounts"."id" < "inboxes"."account_id"
+
+Ref "messages_account_id_foreign":"accounts"."id" < "messages"."account_id"
+
+Ref "notification_settings_account_id_foreign":"accounts"."id" < "notification_settings"."account_id"
+
+Ref "subscriptions_account_id_foreign":"accounts"."id" < "subscriptions"."account_id"
+
+Ref "telegram_bots_account_id_foreign":"accounts"."id" < "telegram_bots"."account_id"
+
+Ref "webhooks_account_id_foreign":"accounts"."id" < "webhooks"."account_id"
+
+Ref "active_storage_attachments_blob_id_foreign":"active_storage_blobs"."id" < "active_storage_attachments"."blob_id"
+
+Ref "agent_bot_inboxes_agent_bot_id_foreign":"agent_bots"."id" < "agent_bot_inboxes"."agent_bot_id"
+
+Ref "contact_inboxes_contact_id_foreign":"contacts"."id" < "contact_inboxes"."contact_id"
+
+Ref "conversations_contact_id_foreign":"contacts"."id" < "conversations"."contact_id"
+
+Ref "events_conversation_id_foreign":"conversations"."id" < "events"."conversation_id"
+
+Ref "messages_conversation_id_foreign":"conversations"."id" < "messages"."conversation_id"
+
+Ref "agent_bot_inboxes_inbox_id_foreign":"inboxes"."id" < "agent_bot_inboxes"."inbox_id"
+
+Ref "contact_inboxes_inbox_id_foreign":"inboxes"."id" < "contact_inboxes"."inbox_id"
+
+Ref "conversations_inbox_id_foreign":"inboxes"."id" < "conversations"."inbox_id"
+
+Ref "events_inbox_id_foreign":"inboxes"."id" < "events"."inbox_id"
+
+Ref "inbox_members_inbox_id_foreign":"inboxes"."id" < "inbox_members"."inbox_id"
+
+Ref "messages_inbox_id_foreign":"inboxes"."id" < "messages"."inbox_id"
+
+Ref "webhooks_inbox_id_foreign":"inboxes"."id" < "webhooks"."inbox_id"
+
+Ref "attachments_message_id_foreign":"messages"."id" < "attachments"."message_id"
+
+Ref "messages_contact_id_foreign":"contacts"."id" < "messages"."contact_id"
+
+Ref "taggings_tag_id_foreign":"tags"."id" < "taggings"."tag_id"
+
+Ref "events_user_id_foreign":"users"."id" < "events"."user_id"
+
+Ref "inbox_members_user_id_foreign":"users"."id" < "inbox_members"."user_id"
+
+Ref "messages_user_id_foreign":"users"."id" < "messages"."user_id"
+
+Ref "notification_settings_user_id_foreign":"users"."id" < "notification_settings"."user_id"
+
+Ref "users_inviter_foreign":"users"."id" < "users"."inviter"

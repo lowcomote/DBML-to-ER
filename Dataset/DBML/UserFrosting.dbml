@@ -1,0 +1,139 @@
+Table "activities" {
+  "id" INT [pk, not null, increment]
+  "ip_address" VARCHAR(255)
+  "user_id" INT [not null]
+  "type" VARCHAR(255) [not null]
+  "occurred_at" TIMESTAMP
+  "description" TEXT
+}
+
+Table "groups" {
+  "id" INT [pk, not null, increment]
+  "slug" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "description" TEXT
+  "icon" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "password_resets" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT [not null]
+  "hash" VARCHAR(255) [not null]
+  "completed" TINYINT [not null]
+  "expires_at" TIMESTAMP
+  "completed_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "permission_roles" {
+  "permission_id" INT [not null]
+  "role_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "roles" {
+  "id" INT [pk, not null, increment]
+  "slug" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "description" TEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "permissions" {
+  "id" INT [pk, not null, increment]
+  "slug" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "conditions" TEXT [not null]
+  "description" TEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "persistences" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT [not null]
+  "token" VARCHAR(255) [not null]
+  "persistent_token" VARCHAR(255) [not null]
+  "expires_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "role_users" {
+  "user_id" INT [not null]
+  "role_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "users" {
+  "id" INT [pk, not null, increment]
+  "user_name" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "first_name" VARCHAR(255) [not null]
+  "last_name" VARCHAR(255) [not null]
+  "locale" VARCHAR(255) [not null]
+  "theme" VARCHAR(255)
+  "group_id" INT [not null]
+  "flag_verified" TINYINT [not null]
+  "flag_enabled" TINYINT [not null]
+  "last_activity_id" INT
+  "password" VARCHAR(255) [not null]
+  "deleted_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "verifications" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT [not null]
+  "hash" VARCHAR(255) [not null]
+  "completed" TINYINT [not null]
+  "expires_at" TIMESTAMP
+  "completed_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "sessions" {
+  "id" VARCHAR(255) [not null]
+  "user_id" INT
+  "ip_address" VARCHAR(255)
+  "user_agent" TEXT
+  "payload" TEXT [not null]
+  "last_activity" INT [not null]
+}
+
+Table "throttles" {
+  "id" INT [pk, not null, increment]
+  "type" VARCHAR(255) [not null]
+  "ip" VARCHAR(255)
+  "request_data" TEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Ref:"groups"."id" < "users"."group_id"
+
+Ref:"roles"."id" < "permission_roles"."role_id"
+
+Ref:"roles"."id" < "role_users"."role_id"
+
+Ref:"permissions"."id" < "permission_roles"."permission_id"
+
+Ref:"users"."id" < "activities"."user_id"
+
+Ref:"users"."id" < "password_resets"."user_id"
+
+Ref:"users"."id" < "persistences"."user_id"
+
+Ref:"users"."id" < "role_users"."user_id"
+
+Ref:"users"."id" < "verifications"."user_id"
+
+Ref:"users"."id" < "sessions"."user_id"

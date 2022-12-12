@@ -1,0 +1,389 @@
+Table "account_emailaddress" {
+  "id" INTEGER [not null]
+  "email" VARCHAR(255) [not null]
+  "verified" BOOLEAN [not null]
+  "primary" BOOLEAN [not null]
+  "user_id" INTEGER [not null]
+
+Indexes {
+  user_id [name: "account_emailaddress_user_id_index"]
+}
+}
+
+Table "account_emailconfirmation" {
+  "id" INTEGER [not null]
+  "created" timestamp(0) [not null]
+  "sent" timestamp(0)
+  "key" VARCHAR(255) [not null]
+  "email_address_id" INTEGER [not null]
+
+Indexes {
+  email_address_id [name: "account_emailconfirmation_email_address_id_index"]
+}
+}
+
+Table "auth_group" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+}
+
+Table "auth_group_permissions" {
+  "id" INTEGER [not null]
+  "group_id" INTEGER [not null]
+  "permission_id" INTEGER [not null]
+
+Indexes {
+  group_id [name: "auth_group_permissions_group_id_index"]
+  permission_id [name: "auth_group_permissions_permission_id_index"]
+}
+}
+
+Table "auth_permission" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "content_type_id" INTEGER [not null]
+  "codename" VARCHAR(255) [not null]
+
+Indexes {
+  content_type_id [name: "auth_permission_content_type_id_index"]
+}
+}
+
+Table "django_admin_log" {
+  "id" INTEGER [not null]
+  "action_time" timestamp(0) [not null]
+  "object_id" TEXT
+  "object_repr" VARCHAR(255) [not null]
+  "action_flag" SMALLINT [not null]
+  "change_message" TEXT [not null]
+  "content_type_id" INTEGER
+  "user_id" INTEGER [not null]
+
+Indexes {
+  content_type_id [name: "django_admin_log_content_type_id_index"]
+  user_id [name: "django_admin_log_user_id_index"]
+}
+}
+
+Table "django_content_type" {
+  "id" INTEGER [not null]
+  "app_label" VARCHAR(255) [not null]
+  "model" VARCHAR(255) [not null]
+}
+
+Table "django_migrations" {
+  "id" INTEGER [not null]
+  "app" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "applied" timestamp(0) [not null]
+}
+
+Table "django_session" {
+  "session_key" VARCHAR(255) [not null]
+  "session_data" TEXT [not null]
+  "expire_date" timestamp(0) [not null]
+
+Indexes {
+  expire_date [name: "django_session_expire_date_index"]
+}
+}
+
+Table "django_site" {
+  "id" INTEGER [not null]
+  "domain" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+}
+
+Table "djstripe_customer" {
+  "djstripe_id" BIGINT [not null]
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "created" timestamp(0)
+  "metadata" TEXT
+  "description" TEXT
+  "djstripe_created" timestamp(0) [not null]
+  "djstripe_updated" timestamp(0) [not null]
+  "balance" BIGINT [not null]
+  "business_vat_id" VARCHAR(255) [not null]
+  "currency" VARCHAR(255) [not null]
+  "delinquent" BOOLEAN [not null]
+  "coupon_start" timestamp(0)
+  "coupon_end" timestamp(0)
+  "email" TEXT [not null]
+  "shipping" TEXT
+  "date_purged" timestamp(0)
+  "coupon_id" BIGINT
+  "default_source_id" VARCHAR(255)
+  "subscriber_id" INTEGER
+  "address" TEXT
+  "invoice_prefix" VARCHAR(255) [not null]
+  "invoice_settings" TEXT
+  "name" TEXT [not null]
+  "phone" TEXT [not null]
+  "preferred_locales" TEXT
+  "tax_exempt" VARCHAR(255) [not null]
+  "default_payment_method_id" BIGINT
+
+Indexes {
+  coupon_id [name: "djstripe_customer_coupon_id_index"]
+  default_source_id [name: "djstripe_customer_default_source_id_index"]
+  subscriber_id [name: "djstripe_customer_subscriber_id_index"]
+  default_payment_method_id [name: "djstripe_customer_default_payment_method_id_index"]
+}
+}
+
+Table "djstripe_plan" {
+  "djstripe_id" BIGINT [not null]
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN
+  "created" timestamp(0)
+  "metadata" TEXT
+  "description" TEXT
+  "djstripe_created" timestamp(0) [not null]
+  "djstripe_updated" timestamp(0) [not null]
+  "aggregate_usage" VARCHAR(255) [not null]
+  "amount" DECIMAL(8, 2)
+  "billing_scheme" VARCHAR(255) [not null]
+  "currency" VARCHAR(255) [not null]
+  "interval" VARCHAR(255) [not null]
+  "interval_count" INTEGER
+  "nickname" TEXT [not null]
+  "tiers" TEXT
+  "tiers_mode" VARCHAR(255)
+  "transform_usage" TEXT
+  "trial_period_days" INTEGER
+  "usage_type" VARCHAR(255) [not null]
+  "name" TEXT
+  "statement_descriptor" VARCHAR(255)
+  "product_id" BIGINT
+  "active" BOOLEAN [not null]
+
+Indexes {
+  product_id [name: "djstripe_plan_product_id_index"]
+}
+}
+
+Table "djstripe_product" {
+  "djstripe_id" BIGINT [not null]
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "created" timestamp(0)
+  "metadata" TEXT
+  "description" TEXT
+  "djstripe_created" timestamp(0) [not null]
+  "djstripe_updated" timestamp(0) [not null]
+  "name" TEXT [not null]
+  "type" VARCHAR(255) [not null]
+  "active" BOOLEAN [not null]
+  "attributes" TEXT
+  "caption" TEXT [not null]
+  "deactivate_on" TEXT
+  "images" TEXT
+  "package_dimensions" TEXT
+  "shippable" BOOLEAN [not null]
+  "url" VARCHAR(255)
+  "statement_descriptor" VARCHAR(255) [not null]
+  "unit_label" VARCHAR(255) [not null]
+}
+
+Table "djstripe_subscription" {
+  "djstripe_id" BIGINT [not null]
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN
+  "created" timestamp(0)
+  "metadata" TEXT [not null]
+  "description" TEXT [not null]
+  "djstripe_created" timestamp(0) [not null]
+  "djstripe_updated" timestamp(0) [not null]
+  "application_fee_percent" DECIMAL(8, 2)
+  "billing" VARCHAR(255) [not null]
+  "billing_cycle_anchor" timestamp(0)
+  "cancel_at_period_end" BOOLEAN [not null]
+  "canceled_at" timestamp(0)
+  "current_period_end" timestamp(0) [not null]
+  "current_period_start" timestamp(0) [not null]
+  "days_until_due" INTEGER
+  "ended_at" timestamp(0)
+  "quantity" INTEGER
+  "start" timestamp(0) [not null]
+  "status" VARCHAR(255) [not null]
+  "tax_percent" DECIMAL(8, 2)
+  "trial_end" timestamp(0)
+  "trial_start" timestamp(0)
+  "customer_id" BIGINT [not null]
+  "plan_id" BIGINT
+  "pending_setup_intent_id" BIGINT
+
+Indexes {
+  customer_id [name: "djstripe_subscription_customer_id_index"]
+  plan_id [name: "djstripe_subscription_plan_id_index"]
+  pending_setup_intent_id [name: "djstripe_subscription_pending_setup_intent_id_index"]
+}
+}
+
+Table "pegasus_examples_employee" {
+  "id" INTEGER [not null]
+  "created_at" timestamp(0) [not null]
+  "updated_at" timestamp(0) [not null]
+  "name" VARCHAR(255) [not null]
+  "department" VARCHAR(255) [not null]
+  "salary" INTEGER [not null]
+  "user_id" INTEGER [not null]
+
+Indexes {
+  user_id [name: "pegasus_examples_employee_user_id_index"]
+}
+}
+
+Table "pegasus_examples_payment" {
+  "created_at" timestamp(0) [not null]
+  "updated_at" timestamp(0) [not null]
+  "id" INT [not null]
+  "charge_id" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "amount" INTEGER [not null]
+  "user_id" INTEGER [not null]
+
+Indexes {
+  user_id [name: "pegasus_examples_payment_user_id_index"]
+}
+}
+
+Table "teams_invitation" {
+  "id" INT [not null]
+  "email" VARCHAR(255) [not null]
+  "role" VARCHAR(255) [not null]
+  "is_accepted" BOOLEAN [not null]
+  "invited_by_id" INTEGER [not null]
+  "team_id" INTEGER [not null]
+  "accepted_by_id" INTEGER
+  "created_at" timestamp(0) [not null]
+  "updated_at" timestamp(0) [not null]
+
+Indexes {
+  invited_by_id [name: "teams_invitation_invited_by_id_index"]
+  team_id [name: "teams_invitation_team_id_index"]
+  accepted_by_id [name: "teams_invitation_accepted_by_id_index"]
+}
+}
+
+Table "teams_membership" {
+  "id" INTEGER [not null]
+  "role" VARCHAR(255) [not null]
+  "team_id" INTEGER [not null]
+  "user_id" INTEGER [not null]
+  "created_at" timestamp(0) [not null]
+  "updated_at" timestamp(0) [not null]
+
+Indexes {
+  team_id [name: "teams_membership_team_id_index"]
+  user_id [name: "teams_membership_user_id_index"]
+}
+}
+
+Table "teams_team" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "created_at" timestamp(0) [not null]
+  "updated_at" timestamp(0) [not null]
+  "subscription_id" BIGINT
+
+Indexes {
+  subscription_id [name: "teams_team_subscription_id_index"]
+}
+}
+
+Table "users_customuser" {
+  "id" INTEGER [not null]
+  "password" VARCHAR(255) [not null]
+  "last_login" timestamp(0)
+  "is_superuser" BOOLEAN [not null]
+  "username" VARCHAR(255) [not null]
+  "first_name" VARCHAR(255) [not null]
+  "last_name" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "is_staff" BOOLEAN [not null]
+  "is_active" BOOLEAN [not null]
+  "date_joined" timestamp(0) [not null]
+  "avatar" VARCHAR(255)
+  "customer_id" BIGINT
+  "subscription_id" BIGINT
+
+Indexes {
+  customer_id [name: "users_customuser_customer_id_index"]
+  subscription_id [name: "users_customuser_subscription_id_index"]
+}
+}
+
+Table "users_customuser_groups" {
+  "id" INTEGER [not null]
+  "customuser_id" INTEGER [not null]
+  "group_id" INTEGER [not null]
+
+Indexes {
+  customuser_id [name: "users_customuser_groups_customuser_id_index"]
+  group_id [name: "users_customuser_groups_group_id_index"]
+}
+}
+
+Table "users_customuser_user_permissions" {
+  "id" INTEGER [not null]
+  "customuser_id" INTEGER [not null]
+  "permission_id" INTEGER [not null]
+
+Indexes {
+  customuser_id [name: "users_customuser_user_permissions_customuser_id_index"]
+  permission_id [name: "users_customuser_user_permissions_permission_id_index"]
+}
+}
+
+Ref:"users_customuser"."id" < "account_emailaddress"."user_id"
+
+Ref:"account_emailaddress"."id" < "account_emailconfirmation"."email_address_id"
+
+Ref:"auth_group"."id" < "auth_group_permissions"."group_id"
+
+Ref:"auth_group"."id" < "users_customuser_groups"."group_id"
+
+Ref:"auth_permission"."id" < "auth_group_permissions"."permission_id"
+
+Ref:"django_content_type"."id" < "auth_permission"."content_type_id"
+
+Ref:"django_content_type"."id" < "django_admin_log"."content_type_id"
+
+Ref:"users_customuser"."id" < "django_admin_log"."user_id"
+
+Ref:"users_customuser"."id" < "djstripe_customer"."subscriber_id"
+
+Ref:"djstripe_product"."djstripe_id" < "djstripe_plan"."product_id"
+
+Ref:"djstripe_customer"."djstripe_id" < "djstripe_subscription"."customer_id"
+
+Ref:"djstripe_plan"."djstripe_id" < "djstripe_subscription"."plan_id"
+
+Ref:"users_customuser"."id" < "pegasus_examples_employee"."user_id"
+
+Ref:"users_customuser"."id" < "pegasus_examples_payment"."user_id"
+
+Ref:"users_customuser"."id" < "teams_invitation"."invited_by_id"
+
+Ref:"teams_membership"."id" < "teams_invitation"."team_id"
+
+Ref:"users_customuser"."id" < "teams_invitation"."accepted_by_id"
+
+Ref:"users_customuser"."id" < "teams_membership"."user_id"
+
+Ref:"teams_team"."id" < "teams_membership"."team_id"
+
+Ref:"djstripe_subscription"."djstripe_id" < "teams_team"."subscription_id"
+
+Ref:"djstripe_customer"."djstripe_id" < "users_customuser"."customer_id"
+
+Ref:"djstripe_subscription"."djstripe_id" < "users_customuser"."subscription_id"
+
+Ref:"users_customuser"."id" < "users_customuser_groups"."customuser_id"
+
+Ref:"users_customuser"."id" < "users_customuser_user_permissions"."customuser_id"
+
+Ref:"auth_permission"."id" < "users_customuser_user_permissions"."permission_id"

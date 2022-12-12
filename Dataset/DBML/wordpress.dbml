@@ -1,0 +1,190 @@
+Table "wp_termmeta" {
+  "meta_id" BIGINT [pk, not null, increment]
+  "term_id" BIGINT [not null]
+  "meta_key" VARCHAR(255)
+  "meta_value" LONGTEXT
+}
+
+Table "wp_terms" {
+  "term_id" BIGINT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "term_group" BIGINT [not null]
+}
+
+Table "wp_term_taxonomy" {
+  "term_taxonomy_id" BIGINT [pk, not null, increment]
+  "term_id" BIGINT [not null]
+  "taxonomy" VARCHAR(255) [not null]
+  "description" LONGTEXT [not null]
+  "parent" BIGINT [not null]
+  "count" BIGINT [not null]
+}
+
+Table "wp_term_relationships" {
+  "object_id" BIGINT [not null]
+  "term_taxonomy_id" BIGINT [not null]
+  "term_order" INT [not null]
+}
+
+Table "wp_commentmeta" {
+  "meta_id" BIGINT [pk, not null, increment]
+  "comment_id" BIGINT [not null]
+  "meta_key" VARCHAR(255)
+  "meta_value" LONGTEXT
+}
+
+Table "wp_comments" {
+  "comment_ID" BIGINT [pk, not null, increment]
+  "comment_post_ID" BIGINT [not null]
+  "comment_author" TEXT [not null]
+  "comment_author_email" VARCHAR(255) [not null]
+  "comment_author_url" VARCHAR(255) [not null]
+  "comment_author_IP" VARCHAR(255) [not null]
+  "comment_date" DATETIME [not null]
+  "comment_date_gmt" DATETIME [not null]
+  "comment_content" TEXT [not null]
+  "comment_karma" INT [not null]
+  "comment_approved" VARCHAR(255) [not null]
+  "comment_agent" VARCHAR(255) [not null]
+  "comment_type" VARCHAR(255) [not null]
+  "comment_parent" BIGINT [not null]
+  "user_id" BIGINT [not null]
+}
+
+Table "wp_links" {
+  "link_id" BIGINT [pk, not null, increment]
+  "link_url" VARCHAR(255) [not null]
+  "link_name" VARCHAR(255) [not null]
+  "link_image" VARCHAR(255) [not null]
+  "link_target" VARCHAR(255) [not null]
+  "link_description" VARCHAR(255) [not null]
+  "link_visible" VARCHAR(255) [not null]
+  "link_owner" BIGINT [not null]
+  "link_rating" INT [not null]
+  "link_updated" DATETIME [not null]
+  "link_rel" VARCHAR(255) [not null]
+  "link_notes" MEDIUMTEXT [not null]
+  "link_rss" VARCHAR(255) [not null]
+}
+
+Table "wp_options" {
+  "option_id" BIGINT [pk, not null, increment]
+  "option_name" VARCHAR(255) [not null]
+  "option_value" LONGTEXT [not null]
+  "autoload" VARCHAR(255) [not null]
+}
+
+Table "wp_postmeta" {
+  "meta_id" BIGINT [pk, not null, increment]
+  "post_id" BIGINT [not null]
+  "meta_key" VARCHAR(255)
+  "meta_value" LONGTEXT
+}
+
+Table "wp_posts" {
+  "ID" BIGINT [pk, not null, increment]
+  "post_author" BIGINT [not null]
+  "post_date" DATETIME [not null]
+  "post_date_gmt" DATETIME [not null]
+  "post_content" LONGTEXT [not null]
+  "post_title" TEXT [not null]
+  "post_excerpt" TEXT [not null]
+  "post_status" VARCHAR(255) [not null]
+  "comment_status" VARCHAR(255) [not null]
+  "ping_status" VARCHAR(255) [not null]
+  "post_password" VARCHAR(255) [not null]
+  "post_name" VARCHAR(255) [not null]
+  "to_ping" TEXT [not null]
+  "pinged" TEXT [not null]
+  "post_modified" DATETIME [not null]
+  "post_modified_gmt" DATETIME [not null]
+  "post_content_filtered" LONGTEXT [not null]
+  "post_parent" BIGINT [not null]
+  "guid" VARCHAR(255) [not null]
+  "menu_order" INT [not null]
+  "post_type" VARCHAR(255) [not null]
+  "post_mime_type" VARCHAR(255) [not null]
+  "comment_count" BIGINT [not null]
+}
+
+Table "wp_users" {
+  "ID" BIGINT [pk, not null, increment]
+  "user_login" VARCHAR(255) [not null]
+  "user_pass" VARCHAR(255) [not null]
+  "user_nicename" VARCHAR(255) [not null]
+  "user_email" VARCHAR(255) [not null]
+  "user_url" VARCHAR(255) [not null]
+  "user_registered" DATETIME [not null]
+  "user_activation_key" VARCHAR(255) [not null]
+  "user_status" INT [not null]
+  "display_name" VARCHAR(255) [not null]
+}
+
+Table "wp_usermeta" {
+  "umeta_id" BIGINT [pk, not null, increment]
+  "user_id" BIGINT [not null]
+  "meta_key" VARCHAR(255)
+  "meta_value" LONGTEXT
+}
+
+Table "wp_registration_log" {
+  "ID" BIGINT [pk, not null, increment]
+  "email" VARCHAR(255) [not null]
+  "IP" VARCHAR(255) [not null]
+  "blog_id" BIGINT [not null]
+  "date_registered" DATETIME [not null]
+}
+
+Table "wp_site" {
+  "id" BIGINT [pk, not null, increment]
+  "domain" VARCHAR(255) [not null]
+  "path" VARCHAR(255) [not null]
+}
+
+Table "wp_sitemeta" {
+  "meta_id" BIGINT [pk, not null, increment]
+  "site_id" BIGINT [not null]
+  "meta_key" VARCHAR(255)
+  "meta_value" LONGTEXT
+}
+
+Table "wp_signups" {
+  "signup_id" BIGINT [pk, not null, increment]
+  "domain" VARCHAR(255) [not null]
+  "path" VARCHAR(255) [not null]
+  "title" LONGTEXT [not null]
+  "user_login" VARCHAR(255) [not null]
+  "user_email" VARCHAR(255) [not null]
+  "registered" DATETIME [not null]
+  "activated" DATETIME [not null]
+  "active" TINYINT [not null]
+  "activation_key" VARCHAR(255) [not null]
+  "meta" LONGTEXT
+}
+
+Ref:"wp_terms"."term_id" < "wp_termmeta"."term_id"
+
+Ref:"wp_term_taxonomy"."term_taxonomy_id" < "wp_term_relationships"."term_taxonomy_id"
+
+Ref:"wp_terms"."term_id" < "wp_term_taxonomy"."term_id"
+
+Ref:"wp_posts"."ID" < "wp_term_relationships"."object_id"
+
+Ref:"wp_comments"."comment_ID" < "wp_commentmeta"."comment_id"
+
+Ref:"wp_posts"."ID" < "wp_comments"."comment_post_ID"
+
+Ref:"wp_users"."ID" < "wp_links"."link_owner"
+
+Ref:"wp_posts"."ID" < "wp_postmeta"."post_id"
+
+Ref:"wp_users"."ID" < "wp_posts"."post_author"
+
+Ref:"wp_posts"."ID" < "wp_posts"."post_parent"
+
+Ref:"wp_users"."ID" < "wp_comments"."user_id"
+
+Ref:"wp_users"."ID" < "wp_usermeta"."user_id"
+
+Ref:"wp_site"."id" < "wp_sitemeta"."site_id"

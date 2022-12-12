@@ -1,0 +1,995 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_customer_group" links="//@modules.0/@modularizableElements.93/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_address" links="//@modules.0/@modularizableElements.70/@linksToEntities.1 //@modules.0/@modularizableElements.94/@linksToEntities.0 //@modules.0/@modularizableElements.97/@linksToEntities.0 //@modules.0/@modularizableElements.98/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="phone_number"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="street"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="company"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="city"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="postcode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="province_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="province_name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_adjustment" links="//@modules.0/@modularizableElements.71/@linksToEntities.1 //@modules.0/@modularizableElements.72/@linksToEntities.1 //@modules.0/@modularizableElements.73/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_item_unit_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_neutral" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_locked" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="origin_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_admin_api_access_token" links="//@modules.0/@modularizableElements.74/@linksToEntities.1 //@modules.0/@modularizableElements.75/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="client_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="scope"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_admin_api_auth_code" links="//@modules.0/@modularizableElements.76/@linksToEntities.1 //@modules.0/@modularizableElements.77/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="client_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="redirect_uri"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="scope"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_admin_api_client" links="//@modules.0/@modularizableElements.74/@linksToEntities.0 //@modules.0/@modularizableElements.76/@linksToEntities.0 //@modules.0/@modularizableElements.78/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="random_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="redirect_uris"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="secret"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="allowed_grant_types"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_admin_api_refresh_token" links="//@modules.0/@modularizableElements.78/@linksToEntities.1 //@modules.0/@modularizableElements.79/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="client_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="scope"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_admin_user" links="//@modules.0/@modularizableElements.75/@linksToEntities.0 //@modules.0/@modularizableElements.77/@linksToEntities.0 //@modules.0/@modularizableElements.79/@linksToEntities.0 //@modules.0/@modularizableElements.80/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username_canonical"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="enabled" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="salt"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_login" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_reset_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_requested_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_verification_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locked" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="credentials_expire_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="roles"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_canonical"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="encoder_name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_avatar_image" links="//@modules.0/@modularizableElements.80/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_channel" links="//@modules.0/@modularizableElements.81/@linksToEntities.1 //@modules.0/@modularizableElements.82/@linksToEntities.1 //@modules.0/@modularizableElements.83/@linksToEntities.1 //@modules.0/@modularizableElements.84/@linksToEntities.1 //@modules.0/@modularizableElements.85/@linksToEntities.1 //@modules.0/@modularizableElements.86/@linksToEntities.0 //@modules.0/@modularizableElements.88/@linksToEntities.0 //@modules.0/@modularizableElements.90/@linksToEntities.0 //@modules.0/@modularizableElements.99/@linksToEntities.0 //@modules.0/@modularizableElements.110/@linksToEntities.0 //@modules.0/@modularizableElements.122/@linksToEntities.0 //@modules.0/@modularizableElements.142/@linksToEntities.0 //@modules.0/@modularizableElements.154/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="default_locale_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="base_currency_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="default_tax_zone_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="color"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="enabled" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="hostname"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="theme_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tax_calculation_strategy"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="contact_email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="skipping_shipping_step_allowed" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="skipping_payment_step_allowed" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="account_verification_required" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shop_billing_data_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="menu_taxon_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_channel_countries" links="//@modules.0/@modularizableElements.86/@linksToEntities.1 //@modules.0/@modularizableElements.87/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_channel_currencies" links="//@modules.0/@modularizableElements.88/@linksToEntities.1 //@modules.0/@modularizableElements.89/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="currency_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_channel_locales" links="//@modules.0/@modularizableElements.90/@linksToEntities.1 //@modules.0/@modularizableElements.91/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_channel_pricing" links="//@modules.0/@modularizableElements.92/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_variant_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="price" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="original_price" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_code"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_country" links="//@modules.0/@modularizableElements.87/@linksToEntities.0 //@modules.0/@modularizableElements.147/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="enabled" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_currency" links="//@modules.0/@modularizableElements.82/@linksToEntities.0 //@modules.0/@modularizableElements.89/@linksToEntities.0 //@modules.0/@modularizableElements.95/@linksToEntities.0 //@modules.0/@modularizableElements.96/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_customer" links="//@modules.0/@modularizableElements.70/@linksToEntities.0 //@modules.0/@modularizableElements.93/@linksToEntities.1 //@modules.0/@modularizableElements.94/@linksToEntities.1 //@modules.0/@modularizableElements.101/@linksToEntities.0 //@modules.0/@modularizableElements.156/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="default_address_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_canonical"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="birthday" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="gender"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="phone_number"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscribed_to_newsletter" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_exchange_rate" links="//@modules.0/@modularizableElements.95/@linksToEntities.1 //@modules.0/@modularizableElements.96/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="source_currency" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="target_currency" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ratio" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_gateway_config" links="//@modules.0/@modularizableElements.108/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="gateway_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="factory_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="config"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_locale" links="//@modules.0/@modularizableElements.81/@linksToEntities.0 //@modules.0/@modularizableElements.91/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_order" links="//@modules.0/@modularizableElements.71/@linksToEntities.0 //@modules.0/@modularizableElements.97/@linksToEntities.1 //@modules.0/@modularizableElements.98/@linksToEntities.1 //@modules.0/@modularizableElements.99/@linksToEntities.1 //@modules.0/@modularizableElements.100/@linksToEntities.1 //@modules.0/@modularizableElements.101/@linksToEntities.1 //@modules.0/@modularizableElements.102/@linksToEntities.0 //@modules.0/@modularizableElements.107/@linksToEntities.0 //@modules.0/@modularizableElements.144/@linksToEntities.0 //@modules.0/@modularizableElements.149/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_address_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billing_address_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="promotion_coupon_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="number"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="notes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="checkout_completed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="items_total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="adjustments_total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="currency_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="checkout_state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payment_state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token_value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_ip"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_order_item" links="//@modules.0/@modularizableElements.72/@linksToEntities.0 //@modules.0/@modularizableElements.102/@linksToEntities.1 //@modules.0/@modularizableElements.103/@linksToEntities.1 //@modules.0/@modularizableElements.104/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="variant_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="quantity" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="unit_price" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="units_total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="adjustments_total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_immutable" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="variant_name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_order_item_unit" links="//@modules.0/@modularizableElements.73/@linksToEntities.0 //@modules.0/@modularizableElements.104/@linksToEntities.1 //@modules.0/@modularizableElements.105/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipment_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="adjustments_total" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_payment" links="//@modules.0/@modularizableElements.106/@linksToEntities.1 //@modules.0/@modularizableElements.107/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="method_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="currency_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="details"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_payment_method" links="//@modules.0/@modularizableElements.106/@linksToEntities.0 //@modules.0/@modularizableElements.108/@linksToEntities.1 //@modules.0/@modularizableElements.109/@linksToEntities.0 //@modules.0/@modularizableElements.111/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="gateway_config_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="environment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_enabled" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_payment_method_channels" links="//@modules.0/@modularizableElements.109/@linksToEntities.1 //@modules.0/@modularizableElements.110/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payment_method_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_payment_method_translation" links="//@modules.0/@modularizableElements.111/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="instructions"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product" links="//@modules.0/@modularizableElements.112/@linksToEntities.1 //@modules.0/@modularizableElements.114/@linksToEntities.0 //@modules.0/@modularizableElements.116/@linksToEntities.0 //@modules.0/@modularizableElements.119/@linksToEntities.0 //@modules.0/@modularizableElements.121/@linksToEntities.0 //@modules.0/@modularizableElements.123/@linksToEntities.0 //@modules.0/@modularizableElements.129/@linksToEntities.0 //@modules.0/@modularizableElements.131/@linksToEntities.0 //@modules.0/@modularizableElements.133/@linksToEntities.0 //@modules.0/@modularizableElements.134/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="main_taxon_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="enabled" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="variant_selection_method"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="average_rating"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_association" links="//@modules.0/@modularizableElements.113/@linksToEntities.1 //@modules.0/@modularizableElements.114/@linksToEntities.1 //@modules.0/@modularizableElements.115/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="association_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_association_product" links="//@modules.0/@modularizableElements.115/@linksToEntities.1 //@modules.0/@modularizableElements.116/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="association_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_association_type" links="//@modules.0/@modularizableElements.113/@linksToEntities.0 //@modules.0/@modularizableElements.117/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_association_type_translation" links="//@modules.0/@modularizableElements.117/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_attribute" links="//@modules.0/@modularizableElements.118/@linksToEntities.0 //@modules.0/@modularizableElements.120/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="storage_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="configuration"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_attribute_translation" links="//@modules.0/@modularizableElements.118/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_attribute_value" links="//@modules.0/@modularizableElements.119/@linksToEntities.1 //@modules.0/@modularizableElements.120/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attribute_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="text_value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="boolean_value" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="integer_value" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="float_value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="datetime_value" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_value" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="json_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_channels" links="//@modules.0/@modularizableElements.121/@linksToEntities.1 //@modules.0/@modularizableElements.122/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_image" links="//@modules.0/@modularizableElements.123/@linksToEntities.1 //@modules.0/@modularizableElements.124/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_image_product_variants" links="//@modules.0/@modularizableElements.124/@linksToEntities.1 //@modules.0/@modularizableElements.125/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="image_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="variant_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_option" links="//@modules.0/@modularizableElements.126/@linksToEntities.0 //@modules.0/@modularizableElements.127/@linksToEntities.0 //@modules.0/@modularizableElements.130/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_option_translation" links="//@modules.0/@modularizableElements.126/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_option_value" links="//@modules.0/@modularizableElements.127/@linksToEntities.1 //@modules.0/@modularizableElements.128/@linksToEntities.0 //@modules.0/@modularizableElements.138/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_option_value_translation" links="//@modules.0/@modularizableElements.128/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_options" links="//@modules.0/@modularizableElements.129/@linksToEntities.1 //@modules.0/@modularizableElements.130/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_taxon" links="//@modules.0/@modularizableElements.131/@linksToEntities.1 //@modules.0/@modularizableElements.132/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="taxon_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_translation" links="//@modules.0/@modularizableElements.133/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_keywords"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="short_description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_variant" links="//@modules.0/@modularizableElements.92/@linksToEntities.0 //@modules.0/@modularizableElements.103/@linksToEntities.0 //@modules.0/@modularizableElements.125/@linksToEntities.0 //@modules.0/@modularizableElements.134/@linksToEntities.1 //@modules.0/@modularizableElements.135/@linksToEntities.1 //@modules.0/@modularizableElements.136/@linksToEntities.1 //@modules.0/@modularizableElements.137/@linksToEntities.0 //@modules.0/@modularizableElements.139/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tax_category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="version" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="on_hold" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="on_hand" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tracked" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="width"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="height"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="depth"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="weight"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_required" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_variant_option_value" links="//@modules.0/@modularizableElements.137/@linksToEntities.1 //@modules.0/@modularizableElements.138/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="variant_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_value_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_product_variant_translation" links="//@modules.0/@modularizableElements.139/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_promotion" links="//@modules.0/@modularizableElements.140/@linksToEntities.0 //@modules.0/@modularizableElements.141/@linksToEntities.0 //@modules.0/@modularizableElements.143/@linksToEntities.0 //@modules.0/@modularizableElements.145/@linksToEntities.0 //@modules.0/@modularizableElements.146/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="priority" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="exclusive" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="usage_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="used" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="coupon_based" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="starts_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ends_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_promotion_action" links="//@modules.0/@modularizableElements.140/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="promotion_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="configuration"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_promotion_channels" links="//@modules.0/@modularizableElements.141/@linksToEntities.1 //@modules.0/@modularizableElements.142/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="promotion_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_promotion_coupon" links="//@modules.0/@modularizableElements.100/@linksToEntities.0 //@modules.0/@modularizableElements.143/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="promotion_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="usage_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="used" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="per_customer_usage_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="reusable_from_cancelled_orders" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_promotion_order" links="//@modules.0/@modularizableElements.144/@linksToEntities.1 //@modules.0/@modularizableElements.145/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="promotion_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_promotion_rule" links="//@modules.0/@modularizableElements.146/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="promotion_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="configuration"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_province" links="//@modules.0/@modularizableElements.147/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="abbreviation"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shipment" links="//@modules.0/@modularizableElements.105/@linksToEntities.0 //@modules.0/@modularizableElements.148/@linksToEntities.1 //@modules.0/@modularizableElements.149/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="method_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tracking"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipped_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shipping_category" links="//@modules.0/@modularizableElements.136/@linksToEntities.0 //@modules.0/@modularizableElements.150/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shipping_method" links="//@modules.0/@modularizableElements.148/@linksToEntities.0 //@modules.0/@modularizableElements.150/@linksToEntities.1 //@modules.0/@modularizableElements.151/@linksToEntities.1 //@modules.0/@modularizableElements.152/@linksToEntities.1 //@modules.0/@modularizableElements.153/@linksToEntities.0 //@modules.0/@modularizableElements.155/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="zone_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tax_category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="configuration"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="category_requirement" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="calculator"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_enabled" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="archived_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shipping_method_channels" links="//@modules.0/@modularizableElements.153/@linksToEntities.1 //@modules.0/@modularizableElements.154/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_method_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shipping_method_translation" links="//@modules.0/@modularizableElements.155/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shop_billing_data" links="//@modules.0/@modularizableElements.84/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="company"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tax_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="country_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="street"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="city"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="postcode"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_shop_user" links="//@modules.0/@modularizableElements.156/@linksToEntities.1 //@modules.0/@modularizableElements.163/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username_canonical"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="enabled" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="salt"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_login" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_reset_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_requested_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_verification_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locked" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="credentials_expire_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="roles"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_canonical"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="encoder_name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_tax_category" links="//@modules.0/@modularizableElements.135/@linksToEntities.0 //@modules.0/@modularizableElements.152/@linksToEntities.0 //@modules.0/@modularizableElements.157/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_tax_rate" links="//@modules.0/@modularizableElements.157/@linksToEntities.1 //@modules.0/@modularizableElements.158/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="zone_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="included_in_price" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="calculator"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_taxon" links="//@modules.0/@modularizableElements.85/@linksToEntities.0 //@modules.0/@modularizableElements.112/@linksToEntities.0 //@modules.0/@modularizableElements.132/@linksToEntities.0 //@modules.0/@modularizableElements.159/@linksToEntities.0 //@modules.0/@modularizableElements.159/@linksToEntities.1 //@modules.0/@modularizableElements.160/@linksToEntities.0 //@modules.0/@modularizableElements.160/@linksToEntities.1 //@modules.0/@modularizableElements.161/@linksToEntities.0 //@modules.0/@modularizableElements.162/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tree_root" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tree_left" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tree_right" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tree_level" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_taxon_image" links="//@modules.0/@modularizableElements.161/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_taxon_translation" links="//@modules.0/@modularizableElements.162/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="translatable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_user_oauth" links="//@modules.0/@modularizableElements.163/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="provider"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="access_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refresh_token"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_zone" links="//@modules.0/@modularizableElements.83/@linksToEntities.0 //@modules.0/@modularizableElements.151/@linksToEntities.0 //@modules.0/@modularizableElements.158/@linksToEntities.0 //@modules.0/@modularizableElements.164/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="scope"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sylius_zone_member" links="//@modules.0/@modularizableElements.164/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="belongs_to" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_customer:id - sylius_address:customer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order:id - sylius_adjustment:order_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order_item:id - sylius_adjustment:order_item_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order_item_unit:id - sylius_adjustment:order_item_unit_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_api_client:id - sylius_admin_api_access_token:client_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_user:id - sylius_admin_api_access_token:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_api_client:id - sylius_admin_api_auth_code:client_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_user:id - sylius_admin_api_auth_code:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_api_client:id - sylius_admin_api_refresh_token:client_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_user:id - sylius_admin_api_refresh_token:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_admin_user:id - sylius_avatar_image:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_locale:id - sylius_channel:default_locale_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_currency:id - sylius_channel:base_currency_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_zone:id - sylius_channel:default_tax_zone_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.68"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shop_billing_data:id - sylius_channel:shop_billing_data_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.60"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_channel:menu_taxon_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_channel_countries:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_country:id - sylius_channel_countries:country_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_channel_currencies:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_currency:id - sylius_channel_currencies:currency_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_channel_locales:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_locale:id - sylius_channel_locales:locale_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_variant:id - sylius_channel_pricing:product_variant_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_customer_group:id - sylius_customer:customer_group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_address:id - sylius_customer:default_address_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_currency:id - sylius_exchange_rate:source_currency">
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_currency:id - sylius_exchange_rate:target_currency">
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_address:id - sylius_order:shipping_address_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_address:id - sylius_order:billing_address_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_order:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_promotion_coupon:id - sylius_order:promotion_coupon_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.51"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_customer:id - sylius_order:customer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order:id - sylius_order_item:order_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_variant:id - sylius_order_item:variant_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order_item:id - sylius_order_item_unit:order_item_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shipment:id - sylius_order_item_unit:shipment_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.55"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_payment_method:id - sylius_payment:method_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.24"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.23"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order:id - sylius_payment:order_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.23"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_gateway_config:id - sylius_payment_method:gateway_config_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.24"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_payment_method:id - sylius_payment_method_channels:payment_method_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.24"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.25"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_payment_method_channels:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.25"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_payment_method:id - sylius_payment_method_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.24"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_product:main_taxon_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_association_type:id - sylius_product_association:association_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.30"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_association:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_association:id - sylius_product_association_product:association_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.29"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_association_product:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.29"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_association_type:id - sylius_product_association_type_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.30"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.31"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_attribute:id - sylius_product_attribute_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.32"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.33"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_attribute_value:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.34"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_attribute:id - sylius_product_attribute_value:attribute_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.32"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.34"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_channels:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.35"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_product_channels:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.35"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_image:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.36"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_image:id - sylius_product_image_product_variants:image_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.36"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.37"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_variant:id - sylius_product_image_product_variants:variant_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.37"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_option:id - sylius_product_option_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.38"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.39"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_option:id - sylius_product_option_value:option_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.38"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.40"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_option_value:id - sylius_product_option_value_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.40"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.41"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_options:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.42"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_option:id - sylius_product_options:option_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.38"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.42"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_taxon:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.43"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_product_taxon:taxon_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.43"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.44"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product:id - sylius_product_variant:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_tax_category:id - sylius_product_variant:tax_category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.62"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shipping_category:id - sylius_product_variant:shipping_category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.56"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_variant:id - sylius_product_variant_option_value:variant_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.46"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_option_value:id - sylius_product_variant_option_value:option_value_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.40"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.46"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_product_variant:id - sylius_product_variant_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.45"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.47"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_promotion:id - sylius_promotion_action:promotion_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.48"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.49"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_promotion:id - sylius_promotion_channels:promotion_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.48"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.50"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_promotion_channels:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.50"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_promotion:id - sylius_promotion_coupon:promotion_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.48"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.51"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order:id - sylius_promotion_order:order_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.52"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_promotion:id - sylius_promotion_order:promotion_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.48"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.52"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_promotion:id - sylius_promotion_rule:promotion_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.48"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.53"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_country:id - sylius_province:country_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.54"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shipping_method:id - sylius_shipment:method_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.57"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.55"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_order:id - sylius_shipment:order_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.55"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shipping_category:id - sylius_shipping_method:category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.56"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.57"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_zone:id - sylius_shipping_method:zone_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.68"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.57"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_tax_category:id - sylius_shipping_method:tax_category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.62"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.57"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shipping_method:id - sylius_shipping_method_channels:shipping_method_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.57"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.58"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_channel:id - sylius_shipping_method_channels:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.58"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shipping_method:id - sylius_shipping_method_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.57"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.59"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_customer:id - sylius_shop_user:customer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.61"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_tax_category:id - sylius_tax_rate:category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.62"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.63"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_zone:id - sylius_tax_rate:zone_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.68"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.63"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_taxon:tree_root">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_taxon:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_taxon_image:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.65"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_taxon:id - sylius_taxon_translation:translatable_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.64"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.66"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_shop_user:id - sylius_user_oauth:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.61"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.67"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="sylius_zone:id - sylius_zone_member:belongs_to">
+      <linksToEntities entity="//@modules.0/@modularizableElements.68"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.69"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

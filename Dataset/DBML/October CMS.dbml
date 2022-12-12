@@ -1,0 +1,296 @@
+Table "backend_access_log" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT [not null]
+  "ip_address" VARCHAR(255)
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "backend_user_groups" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "code" VARCHAR(255)
+  "description" TEXT
+  "is_new_user_default" TINYINT [not null]
+}
+
+Table "backend_user_preferences" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT [not null]
+  "namespace" VARCHAR(255) [not null]
+  "group" VARCHAR(255) [not null]
+  "item" VARCHAR(255) [not null]
+  "value" TEXT
+}
+
+Table "backend_user_roles" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "code" VARCHAR(255)
+  "description" TEXT
+  "permissions" TEXT
+  "is_system" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "backend_user_throttle" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT
+  "ip_address" VARCHAR(255)
+  "attempts" INT [not null]
+  "last_attempt_at" TIMESTAMP
+  "is_suspended" TINYINT [not null]
+  "suspended_at" TIMESTAMP
+  "is_banned" TINYINT [not null]
+  "banned_at" TIMESTAMP
+}
+
+Table "backend_users" {
+  "id" INT [pk, not null, increment]
+  "first_name" VARCHAR(255)
+  "last_name" VARCHAR(255)
+  "login" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "password" VARCHAR(255) [not null]
+  "activation_code" VARCHAR(255)
+  "persist_code" VARCHAR(255)
+  "reset_password_code" VARCHAR(255)
+  "permissions" TEXT
+  "is_activated" TINYINT [not null]
+  "role_id" INT
+  "activated_at" TIMESTAMP
+  "last_login" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "deleted_at" TIMESTAMP
+  "is_superuser" TINYINT [not null]
+}
+
+Table "backend_users_groups" {
+  "user_id" INT [not null]
+  "user_group_id" INT [not null]
+}
+
+Table "cache" {
+  "key" VARCHAR(255) [not null]
+  "value" LONGTEXT [not null]
+  "expiration" INT [not null]
+}
+
+Table "cms_theme_data" {
+  "id" INT [pk, not null, increment]
+  "theme" VARCHAR(255)
+  "data" MEDIUMTEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "cms_theme_logs" {
+  "id" INT [pk, not null, increment]
+  "type" VARCHAR(255) [not null]
+  "theme" VARCHAR(255)
+  "template" VARCHAR(255)
+  "old_template" VARCHAR(255)
+  "content" LONGTEXT
+  "old_content" LONGTEXT
+  "user_id" INT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "cms_theme_templates" {
+  "id" INT [pk, not null, increment]
+  "source" VARCHAR(255) [not null]
+  "path" VARCHAR(255) [not null]
+  "content" LONGTEXT [not null]
+  "file_size" INT [not null]
+  "updated_at" DATETIME
+  "deleted_at" DATETIME
+}
+
+Table "deferred_bindings" {
+  "id" INT [pk, not null, increment]
+  "master_type" VARCHAR(255) [not null]
+  "master_field" VARCHAR(255) [not null]
+  "slave_type" VARCHAR(255) [not null]
+  "slave_id" VARCHAR(255) [not null]
+  "session_key" VARCHAR(255) [not null]
+  "is_bind" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "failed_jobs" {
+  "id" INT [pk, not null, increment]
+  "connection" TEXT [not null]
+  "queue" TEXT [not null]
+  "payload" TEXT [not null]
+  "exception" LONGTEXT
+  "failed_at" TIMESTAMP
+}
+
+Table "jobs" {
+  "id" BIGINT [pk, not null, increment]
+  "queue" VARCHAR(255) [not null]
+  "payload" TEXT [not null]
+  "attempts" TINYINT [not null]
+  "reserved_at" INT
+  "available_at" INT [not null]
+  "created_at" INT [not null]
+}
+
+Table "migrations" {
+  "id" INT [pk, not null, increment]
+  "migration" VARCHAR(255) [not null]
+  "batch" INT [not null]
+}
+
+Table "sessions" {
+  "id" VARCHAR(255) [not null]
+  "payload" TEXT
+  "last_activity" INT
+  "user_id" INT
+  "ip_address" VARCHAR(255)
+  "user_agent" TEXT
+}
+
+Table "system_event_logs" {
+  "id" INT [pk, not null, increment]
+  "level" VARCHAR(255)
+  "message" TEXT
+  "details" MEDIUMTEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_files" {
+  "id" INT [pk, not null, increment]
+  "disk_name" VARCHAR(255) [not null]
+  "file_name" VARCHAR(255) [not null]
+  "file_size" INT [not null]
+  "content_type" VARCHAR(255) [not null]
+  "title" VARCHAR(255)
+  "description" TEXT
+  "field" VARCHAR(255)
+  "attachment_id" VARCHAR(255)
+  "attachment_type" VARCHAR(255)
+  "is_public" TINYINT [not null]
+  "sort_order" INT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_mail_layouts" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255)
+  "code" VARCHAR(255)
+  "content_html" TEXT
+  "content_text" TEXT
+  "content_css" TEXT
+  "is_locked" TINYINT [not null]
+  "options" TEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_mail_partials" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255)
+  "code" VARCHAR(255)
+  "content_html" TEXT
+  "content_text" TEXT
+  "is_custom" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_mail_templates" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255)
+  "subject" VARCHAR(255)
+  "description" TEXT
+  "content_html" TEXT
+  "content_text" TEXT
+  "layout_id" INT
+  "is_custom" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_parameters" {
+  "id" INT [pk, not null, increment]
+  "namespace" VARCHAR(255) [not null]
+  "group" VARCHAR(255) [not null]
+  "item" VARCHAR(255) [not null]
+  "value" TEXT
+}
+
+Table "system_plugin_history" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "version" VARCHAR(255) [not null]
+  "detail" TEXT
+  "created_at" TIMESTAMP
+}
+
+Table "system_plugin_versions" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "version" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "is_disabled" TINYINT [not null]
+  "is_frozen" TINYINT [not null]
+}
+
+Table "system_request_logs" {
+  "id" INT [pk, not null, increment]
+  "status_code" INT
+  "url" VARCHAR(255)
+  "referer" TEXT
+  "count" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_revisions" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT
+  "field" VARCHAR(255)
+  "cast" VARCHAR(255)
+  "old_value" TEXT
+  "new_value" TEXT
+  "revisionable_type" VARCHAR(255) [not null]
+  "revisionable_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "system_settings" {
+  "id" INT [pk, not null, increment]
+  "item" VARCHAR(255)
+  "value" MEDIUMTEXT
+}
+
+Ref:"backend_users"."id" < "backend_access_log"."user_id"
+
+Ref:"backend_users"."id" < "backend_user_preferences"."user_id"
+
+Ref:"backend_users"."id" < "backend_user_throttle"."user_id"
+
+Ref:"backend_users"."id" < "system_revisions"."user_id"
+
+Ref:"backend_user_roles"."id" < "backend_users"."role_id"
+
+Ref:"backend_users"."id" < "backend_users_groups"."user_id"
+
+Ref:"backend_user_groups"."id" < "backend_users_groups"."user_group_id"
+
+Ref:"backend_users"."id" < "cms_theme_logs"."user_id"
+
+Ref:"backend_users"."id" < "sessions"."user_id"
+
+Ref:"system_mail_layouts"."id" < "system_mail_templates"."layout_id"

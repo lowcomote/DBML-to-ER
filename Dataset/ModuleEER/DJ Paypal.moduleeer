@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_billingagreement">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="agreement_details"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payer"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_address"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="override_merchant_preferences"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="override_charge_mode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="plan"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="merchant"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payer_model_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="plan_model_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="start_date"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="end_of_period"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_billingplan">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="create_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="update_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="merchant_preferences"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_billingplan_payment_definitions">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billingplan_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="paymentdefinition_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_chargemodel">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_dispute">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dispute_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="create_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="update_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="disputed_transactions"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="reason"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dispute_amount"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dispute_outcome"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="messages"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="seller_response_due_date"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dispute_flow"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dispute_channel"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="dispute_life_cycle_stage"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="offer"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="buyer_response_due_date"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refund_details"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_payer">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping_address"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="time_created"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_payment">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="intent"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cart"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payer"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="transactions"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="experience_profile_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="note_to_payer"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="create_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="update_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="redirect_urls"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="failure_reason"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_paymentdefinition">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="frequency_interval"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="frequency"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cycles"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_paymentdefinition_charge_models">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="paymentdefinition_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="chargemodel_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_preparedbillingagreement">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="executed_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="canceled_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="executed_agreement_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_refund">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="reason"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invoice_number"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="create_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="update_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="reason_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refund_reason_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refund_funding_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_payment_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sale_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refund_from_received_amount"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refund_from_transaction_fee"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="total_refunded_amount"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="refund_to_payer"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_sale">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payment_mode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="reason_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="protection_eligibility"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="protection_eligibility_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="clearing_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="transaction_fee"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="receivable_amount"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="exchange_rate"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="fmf_details"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="receipt_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="processor_response"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="create_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="update_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="soft_descriptor"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billing_agreement_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_payment_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invoice_number"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payment_hold_reasons"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payment_hold_status"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_webhookevent">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="event_version"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="create_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="event_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="resource_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="resource"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="summary"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="transmissions"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djpaypal_webhookeventtrigger">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="remote_ip" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="headers"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="body"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="valid"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="processed"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="exception"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="traceback"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djpaypal_version"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="webhook_event_id"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

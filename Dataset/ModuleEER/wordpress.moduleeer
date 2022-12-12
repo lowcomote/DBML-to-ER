@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_termmeta" links="//@modules.0/@modularizableElements.16/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_terms" links="//@modules.0/@modularizableElements.16/@linksToEntities.0 //@modules.0/@modularizableElements.18/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_group" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_term_taxonomy" links="//@modules.0/@modularizableElements.17/@linksToEntities.0 //@modules.0/@modularizableElements.18/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_taxonomy_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="taxonomy"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="count" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_term_relationships" links="//@modules.0/@modularizableElements.17/@linksToEntities.1 //@modules.0/@modularizableElements.19/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_taxonomy_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="term_order" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_commentmeta" links="//@modules.0/@modularizableElements.20/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_comments" links="//@modules.0/@modularizableElements.20/@linksToEntities.0 //@modules.0/@modularizableElements.21/@linksToEntities.1 //@modules.0/@modularizableElements.26/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_ID" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_post_ID" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_author"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_author_email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_author_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_author_IP"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_date_gmt" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_karma" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_approved"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_agent"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_parent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_links" links="//@modules.0/@modularizableElements.22/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_image"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_target"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_visible"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_owner" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_rating" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_updated" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_rel"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_notes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_rss"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_options">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="autoload"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_postmeta" links="//@modules.0/@modularizableElements.23/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_posts" links="//@modules.0/@modularizableElements.19/@linksToEntities.0 //@modules.0/@modularizableElements.21/@linksToEntities.0 //@modules.0/@modularizableElements.23/@linksToEntities.0 //@modules.0/@modularizableElements.24/@linksToEntities.1 //@modules.0/@modularizableElements.25/@linksToEntities.0 //@modules.0/@modularizableElements.25/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ID" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_author" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_date_gmt" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_excerpt"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ping_status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="to_ping"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="pinged"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_modified" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_modified_gmt" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_content_filtered"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_parent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="guid"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="menu_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="post_mime_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comment_count" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_users" links="//@modules.0/@modularizableElements.22/@linksToEntities.0 //@modules.0/@modularizableElements.24/@linksToEntities.0 //@modules.0/@modularizableElements.26/@linksToEntities.0 //@modules.0/@modularizableElements.27/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ID" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_login"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_pass"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_nicename"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_registered" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_activation_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_status" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="display_name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_usermeta" links="//@modules.0/@modularizableElements.27/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="umeta_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_registration_log">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ID" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="IP"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="blog_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_registered" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_site" links="//@modules.0/@modularizableElements.28/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="domain"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_sitemeta" links="//@modules.0/@modularizableElements.28/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_signups">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="signup_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="domain"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_login"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="registered" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="activated" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="activation_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_terms:term_id - wp_termmeta:term_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_term_taxonomy:term_taxonomy_id - wp_term_relationships:term_taxonomy_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_terms:term_id - wp_term_taxonomy:term_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_posts:ID - wp_term_relationships:object_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_comments:comment_ID - wp_commentmeta:comment_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_posts:ID - wp_comments:comment_post_ID">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:ID - wp_links:link_owner">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_posts:ID - wp_postmeta:post_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:ID - wp_posts:post_author">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_posts:ID - wp_posts:post_parent">
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:ID - wp_comments:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:ID - wp_usermeta:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_site:id - wp_sitemeta:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

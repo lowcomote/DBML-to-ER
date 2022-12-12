@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="account_emailaddress" links="//@modules.0/@modularizableElements.22/@linksToEntities.1 //@modules.0/@modularizableElements.23/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="primary"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="account_emailconfirmation" links="//@modules.0/@modularizableElements.23/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sent"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_address_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_group" links="//@modules.0/@modularizableElements.24/@linksToEntities.0 //@modules.0/@modularizableElements.25/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_group_permissions" links="//@modules.0/@modularizableElements.24/@linksToEntities.1 //@modules.0/@modularizableElements.26/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_permission" links="//@modules.0/@modularizableElements.26/@linksToEntities.0 //@modules.0/@modularizableElements.27/@linksToEntities.1 //@modules.0/@modularizableElements.46/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="codename"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_admin_log" links="//@modules.0/@modularizableElements.28/@linksToEntities.1 //@modules.0/@modularizableElements.29/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_time"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_repr"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_flag"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="change_message"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_content_type" links="//@modules.0/@modularizableElements.27/@linksToEntities.0 //@modules.0/@modularizableElements.28/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app_label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="model"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_migrations">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="applied"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_session">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expire_date"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_site">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="domain"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djstripe_customer" links="//@modules.0/@modularizableElements.30/@linksToEntities.1 //@modules.0/@modularizableElements.32/@linksToEntities.0 //@modules.0/@modularizableElements.42/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="metadata"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="balance" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="business_vat_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="currency"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="delinquent"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="coupon_start"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="coupon_end"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shipping"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_purged"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="coupon_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="default_source_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscriber_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="address"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invoice_prefix"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invoice_settings"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="phone"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="preferred_locales"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tax_exempt"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="default_payment_method_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djstripe_plan" links="//@modules.0/@modularizableElements.31/@linksToEntities.1 //@modules.0/@modularizableElements.33/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="metadata"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="aggregate_usage"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billing_scheme"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="currency"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="interval"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="interval_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="nickname"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tiers"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tiers_mode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="transform_usage"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="trial_period_days" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="usage_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="statement_descriptor"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="product_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djstripe_product" links="//@modules.0/@modularizableElements.31/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="metadata"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="caption"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="deactivate_on"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="images"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="package_dimensions"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="shippable"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="statement_descriptor"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="unit_label"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="djstripe_subscription" links="//@modules.0/@modularizableElements.32/@linksToEntities.1 //@modules.0/@modularizableElements.33/@linksToEntities.1 //@modules.0/@modularizableElements.41/@linksToEntities.0 //@modules.0/@modularizableElements.43/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="livemode"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="metadata"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_created"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="djstripe_updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="application_fee_percent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billing"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billing_cycle_anchor"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cancel_at_period_end"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="canceled_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="current_period_end"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="current_period_start"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="days_until_due" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ended_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="quantity" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="start"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tax_percent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="trial_end"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="trial_start"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="plan_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="pending_setup_intent_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="pegasus_examples_employee" links="//@modules.0/@modularizableElements.34/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="department"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="salary" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="pegasus_examples_payment" links="//@modules.0/@modularizableElements.35/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="charge_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="amount" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="teams_invitation" links="//@modules.0/@modularizableElements.36/@linksToEntities.1 //@modules.0/@modularizableElements.37/@linksToEntities.1 //@modules.0/@modularizableElements.38/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="role"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_accepted"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invited_by_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="team_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="accepted_by_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="teams_membership" links="//@modules.0/@modularizableElements.37/@linksToEntities.0 //@modules.0/@modularizableElements.39/@linksToEntities.1 //@modules.0/@modularizableElements.40/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="role"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="team_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="teams_team" links="//@modules.0/@modularizableElements.40/@linksToEntities.0 //@modules.0/@modularizableElements.41/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscription_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="users_customuser" links="//@modules.0/@modularizableElements.22/@linksToEntities.0 //@modules.0/@modularizableElements.29/@linksToEntities.0 //@modules.0/@modularizableElements.30/@linksToEntities.0 //@modules.0/@modularizableElements.34/@linksToEntities.0 //@modules.0/@modularizableElements.35/@linksToEntities.0 //@modules.0/@modularizableElements.36/@linksToEntities.0 //@modules.0/@modularizableElements.38/@linksToEntities.0 //@modules.0/@modularizableElements.39/@linksToEntities.0 //@modules.0/@modularizableElements.42/@linksToEntities.1 //@modules.0/@modularizableElements.43/@linksToEntities.1 //@modules.0/@modularizableElements.44/@linksToEntities.0 //@modules.0/@modularizableElements.45/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_login"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_superuser"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_staff"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_active"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_joined"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="avatar"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscription_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="users_customuser_groups" links="//@modules.0/@modularizableElements.25/@linksToEntities.1 //@modules.0/@modularizableElements.44/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customuser_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="users_customuser_user_permissions" links="//@modules.0/@modularizableElements.45/@linksToEntities.1 //@modules.0/@modularizableElements.46/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customuser_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - account_emailaddress:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="account_emailaddress:id - account_emailconfirmation:email_address_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - auth_group_permissions:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - users_customuser_groups:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - auth_group_permissions:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - auth_permission:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - django_admin_log:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - django_admin_log:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - djstripe_customer:subscriber_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="djstripe_product:djstripe_id - djstripe_plan:product_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="djstripe_customer:djstripe_id - djstripe_subscription:customer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="djstripe_plan:djstripe_id - djstripe_subscription:plan_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - pegasus_examples_employee:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - pegasus_examples_payment:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - teams_invitation:invited_by_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="teams_membership:id - teams_invitation:team_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - teams_invitation:accepted_by_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - teams_membership:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="teams_team:id - teams_membership:team_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="djstripe_subscription:djstripe_id - teams_team:subscription_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="djstripe_customer:djstripe_id - users_customuser:customer_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="djstripe_subscription:djstripe_id - users_customuser:subscription_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - users_customuser_groups:customuser_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="users_customuser:id - users_customuser_user_permissions:customuser_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - users_customuser_user_permissions:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

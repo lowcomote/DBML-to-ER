@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_group" links="//@modules.0/@modularizableElements.33/@linksToEntities.0 //@modules.0/@modularizableElements.37/@linksToEntities.0 //@modules.0/@modularizableElements.46/@linksToEntities.0 //@modules.0/@modularizableElements.48/@linksToEntities.0 //@modules.0/@modularizableElements.50/@linksToEntities.0 //@modules.0/@modularizableElements.60/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_group_permissions" links="//@modules.0/@modularizableElements.33/@linksToEntities.1 //@modules.0/@modularizableElements.34/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_permission" links="//@modules.0/@modularizableElements.34/@linksToEntities.0 //@modules.0/@modularizableElements.35/@linksToEntities.1 //@modules.0/@modularizableElements.39/@linksToEntities.0 //@modules.0/@modularizableElements.49/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="codename"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_user" links="//@modules.0/@modularizableElements.36/@linksToEntities.0 //@modules.0/@modularizableElements.38/@linksToEntities.0 //@modules.0/@modularizableElements.41/@linksToEntities.0 //@modules.0/@modularizableElements.53/@linksToEntities.0 //@modules.0/@modularizableElements.55/@linksToEntities.0 //@modules.0/@modularizableElements.57/@linksToEntities.0 //@modules.0/@modularizableElements.62/@linksToEntities.0 //@modules.0/@modularizableElements.65/@linksToEntities.0 //@modules.0/@modularizableElements.73/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_login" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_superuser" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_staff" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_active" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_joined" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_user_groups" links="//@modules.0/@modularizableElements.36/@linksToEntities.1 //@modules.0/@modularizableElements.37/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_user_user_permissions" links="//@modules.0/@modularizableElements.38/@linksToEntities.1 //@modules.0/@modularizableElements.39/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_admin_log" links="//@modules.0/@modularizableElements.40/@linksToEntities.1 //@modules.0/@modularizableElements.41/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_time" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_repr"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_flag"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="change_message"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_content_type" links="//@modules.0/@modularizableElements.35/@linksToEntities.0 //@modules.0/@modularizableElements.40/@linksToEntities.0 //@modules.0/@modularizableElements.42/@linksToEntities.0 //@modules.0/@modularizableElements.52/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app_label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="model"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_migrations">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="applied" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_session">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expire_date" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="home_homepage">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_ptr_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="taggit_tag" links="//@modules.0/@modularizableElements.43/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="taggit_taggeditem" links="//@modules.0/@modularizableElements.42/@linksToEntities.1 //@modules.0/@modularizableElements.43/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_collection" links="//@modules.0/@modularizableElements.44/@linksToEntities.0 //@modules.0/@modularizableElements.47/@linksToEntities.0 //@modules.0/@modularizableElements.63/@linksToEntities.0 //@modules.0/@modularizableElements.66/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="depth" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="numchild" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_collectionviewrestriction" links="//@modules.0/@modularizableElements.44/@linksToEntities.1 //@modules.0/@modularizableElements.45/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="restriction_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="collection_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_collectionviewrestriction_groups" links="//@modules.0/@modularizableElements.45/@linksToEntities.1 //@modules.0/@modularizableElements.46/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="collectionviewrestriction_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_groupcollectionpermission" links="//@modules.0/@modularizableElements.47/@linksToEntities.1 //@modules.0/@modularizableElements.48/@linksToEntities.1 //@modules.0/@modularizableElements.49/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="collection_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_grouppagepermission" links="//@modules.0/@modularizableElements.50/@linksToEntities.1 //@modules.0/@modularizableElements.51/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_page" links="//@modules.0/@modularizableElements.51/@linksToEntities.0 //@modules.0/@modularizableElements.52/@linksToEntities.1 //@modules.0/@modularizableElements.53/@linksToEntities.1 //@modules.0/@modularizableElements.54/@linksToEntities.1 //@modules.0/@modularizableElements.55/@linksToEntities.1 //@modules.0/@modularizableElements.56/@linksToEntities.0 //@modules.0/@modularizableElements.58/@linksToEntities.0 //@modules.0/@modularizableElements.61/@linksToEntities.0 //@modules.0/@modularizableElements.64/@linksToEntities.0 //@modules.0/@modularizableElements.68/@linksToEntities.0 //@modules.0/@modularizableElements.70/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="depth" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="numchild" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="live" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="has_unpublished_changes" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url_path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="seo_title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="show_in_menus" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="search_description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="go_live_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expire_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expired" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locked" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="latest_revision_created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_published_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="live_revision_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_published_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="draft_title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locked_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locked_by_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_pagerevision" links="//@modules.0/@modularizableElements.54/@linksToEntities.0 //@modules.0/@modularizableElements.56/@linksToEntities.1 //@modules.0/@modularizableElements.57/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="submitted_for_moderation" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_json"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="approved_go_live_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_pageviewrestriction" links="//@modules.0/@modularizableElements.58/@linksToEntities.1 //@modules.0/@modularizableElements.59/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="restriction_type"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_pageviewrestriction_groups" links="//@modules.0/@modularizableElements.59/@linksToEntities.1 //@modules.0/@modularizableElements.60/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="pageviewrestriction_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailcore_site" links="//@modules.0/@modularizableElements.61/@linksToEntities.1 //@modules.0/@modularizableElements.69/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="hostname"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="port" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_default_site" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="root_page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtaildocs_document" links="//@modules.0/@modularizableElements.62/@linksToEntities.1 //@modules.0/@modularizableElements.63/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="uploaded_by_user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="collection_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file_size" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file_hash"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailembeds_embed">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="max_width"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="html"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="author_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="provider_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="thumbnail_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="width" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="height" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_updated" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailforms_formsubmission" links="//@modules.0/@modularizableElements.64/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="form_data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="submit_time" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailimages_image" links="//@modules.0/@modularizableElements.65/@linksToEntities.1 //@modules.0/@modularizableElements.66/@linksToEntities.1 //@modules.0/@modularizableElements.67/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="width" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="height" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="focal_point_x" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="focal_point_y" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="focal_point_width" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="focal_point_height" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="uploaded_by_user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file_size" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="collection_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file_hash"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailimages_rendition" links="//@modules.0/@modularizableElements.67/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="width" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="height" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="focal_point_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="filter_spec"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="image_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailredirects_redirect" links="//@modules.0/@modularizableElements.68/@linksToEntities.1 //@modules.0/@modularizableElements.69/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="old_path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_permanent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="redirect_link"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="redirect_page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailsearch_editorspick" links="//@modules.0/@modularizableElements.70/@linksToEntities.1 //@modules.0/@modularizableElements.71/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sort_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailsearch_query" links="//@modules.0/@modularizableElements.71/@linksToEntities.0 //@modules.0/@modularizableElements.72/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query_string"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailsearch_querydailyhits" links="//@modules.0/@modularizableElements.72/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="hits" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wagtailusers_userprofile" links="//@modules.0/@modularizableElements.73/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="submitted_notifications" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="approved_notifications" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="rejected_notifications" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="preferred_language"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="current_time_zone"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="avatar"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - auth_group_permissions:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - auth_group_permissions:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - auth_permission:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - auth_user_groups:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - auth_user_groups:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - auth_user_user_permissions:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - auth_user_user_permissions:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - django_admin_log:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - django_admin_log:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - taggit_taggeditem:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="taggit_tag:id - taggit_taggeditem:tag_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.12"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_collection:id - wagtailcore_collectionviewrestriction:collection_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_collectionviewrestriction:id - wagtailcore_collectionviewrestriction_groups:collectionviewrestriction_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - wagtailcore_collectionviewrestriction_groups:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_collection:id - wagtailcore_groupcollectionpermission:collection_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - wagtailcore_groupcollectionpermission:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - wagtailcore_groupcollectionpermission:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - wagtailcore_grouppagepermission:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailcore_grouppagepermission:page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - wagtailcore_page:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - wagtailcore_page:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_pagerevision:id - wagtailcore_page:live_revision_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - wagtailcore_page:locked_by_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailcore_pagerevision:page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - wagtailcore_pagerevision:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailcore_pageviewrestriction:page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_pageviewrestriction:id - wagtailcore_pageviewrestriction_groups:pageviewrestriction_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - wagtailcore_pageviewrestriction_groups:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailcore_site:root_page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - wagtaildocs_document:uploaded_by_user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.23"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_collection:id - wagtaildocs_document:collection_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.23"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailforms_formsubmission:page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.25"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - wagtailimages_image:uploaded_by_user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_collection:id - wagtailimages_image:collection_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailimages_image:id - wagtailimages_rendition:image_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailredirects_redirect:redirect_page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_site:id - wagtailredirects_redirect:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailcore_page:id - wagtailsearch_editorspick:page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.29"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailsearch_query:id - wagtailsearch_editorspick:query_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.30"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.29"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wagtailsearch_query:id - wagtailsearch_querydailyhits:query_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.30"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.31"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - wagtailusers_userprofile:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.32"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_alerts_bootstrap4alerts">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="alert_context"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="alert_dismissable" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_badge_bootstrap4badge">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="badge_text"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="badge_context"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="badge_pills" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_card_bootstrap4card">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="card_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="card_context"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="card_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="card_outline" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="card_text_color"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_card_bootstrap4cardinner">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="inner_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_carousel_bootstrap4carousel">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="template"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_interval" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_controls" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_indicators" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_keyboard" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_pause"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_ride"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_wrap" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_aspect_ratio"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_carousel_bootstrap4carouselslide" links="//@modules.0/@modularizableElements.30/@linksToEntities.1 //@modules.0/@modularizableElements.31/@linksToEntities.1 //@modules.0/@modularizableElements.32/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="template"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="external_link"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="anchor"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="mailto"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="phone"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="target"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="carousel_image_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="internal_link_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file_link_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_collapse_bootstrap4collapse">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="siblings"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_collapse_bootstrap4collapsecontainer">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_collapse_bootstrap4collapsetrigger">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_content_bootstrap4blockquote">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="quote_content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="quote_origin"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="quote_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_content_bootstrap4code">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code_content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_content_bootstrap4figure">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="figure_caption"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="figure_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_grid_bootstrap4gridcolumn">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="column_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="column_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xs_col" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xs_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xs_ml" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xs_mr" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sm_col" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sm_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sm_ml" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sm_mr" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="md_col" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="md_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="md_ml" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="md_mr" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lg_col" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lg_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lg_ml" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lg_mr" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xl_col" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xl_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xl_ml" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xl_mr" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lg_offset" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="md_offset" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sm_offset" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xl_offset" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="xs_offset" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_grid_bootstrap4gridcontainer">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="container_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_grid_bootstrap4gridrow">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="vertical_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="horizontal_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="gutters" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_jumbotron_bootstrap4jumbotron">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="fluid" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_link_bootstrap4link" links="//@modules.0/@modularizableElements.33/@linksToEntities.1 //@modules.0/@modularizableElements.34/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="template"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="external_link"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="anchor"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="mailto"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="phone"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="target"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_context"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_size"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_outline" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_block" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="internal_link_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="icon_left"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="icon_right"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="file_link_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_listgroup_bootstrap4listgroup">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="list_group_flush" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_listgroup_bootstrap4listgroupitem">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="list_context"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="list_state"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_media_bootstrap4media">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_media_bootstrap4mediabody">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_picture_bootstrap4picture" links="//@modules.0/@modularizableElements.35/@linksToEntities.1 //@modules.0/@modularizableElements.36/@linksToEntities.1 //@modules.0/@modularizableElements.37/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="template"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="external_picture"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="width" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="height" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="caption_text"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_target"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_attributes"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="use_automatic_scaling" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="use_no_cropping" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="use_crop" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="use_upscale" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="picture_fluid" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="picture_rounded" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="picture_thumbnail" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="link_page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="picture_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="thumbnail_options_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="use_responsive_image"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_tabs_bootstrap4tab">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="template"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tab_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tab_alignment"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tab_index" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tab_effect"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_tabs_bootstrap4tabitem">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tab_title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bootstrap4_utilities_bootstrap4spacing">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="cmsplugin_ptr_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="space_property"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="space_sides"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="space_size"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="space_device"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="attributes"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="cms_cmsplugin">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="cms_page" links="//@modules.0/@modularizableElements.31/@linksToEntities.0 //@modules.0/@modularizableElements.33/@linksToEntities.0 //@modules.0/@modularizableElements.35/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="filer_file" links="//@modules.0/@modularizableElements.32/@linksToEntities.0 //@modules.0/@modularizableElements.34/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="filer_image" links="//@modules.0/@modularizableElements.30/@linksToEntities.0 //@modules.0/@modularizableElements.36/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="filer_thumbmailoption" links="//@modules.0/@modularizableElements.37/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="filer_image:id - bootstrap4_carousel_bootstrap4carouselslide:carousel_image_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="cms_page:id - bootstrap4_carousel_bootstrap4carouselslide:internal_link_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="filer_file:id - bootstrap4_carousel_bootstrap4carouselslide:file_link_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="cms_page:id - bootstrap4_link_bootstrap4link:internal_link_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="filer_file:id - bootstrap4_link_bootstrap4link:file_link_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.27"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="cms_page:id - bootstrap4_picture_bootstrap4picture:link_page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.26"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="filer_image:id - bootstrap4_picture_bootstrap4picture:picture_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.28"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="filer_thumbmailoption:id - bootstrap4_picture_bootstrap4picture:thumbnail_options_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.29"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

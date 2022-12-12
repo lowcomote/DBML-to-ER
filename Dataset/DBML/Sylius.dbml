@@ -1,0 +1,869 @@
+Table "sylius_customer_group" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+}
+
+Table "sylius_address" {
+  "id" INT [pk, not null, increment]
+  "customer_id" INT
+  "first_name" VARCHAR(255) [not null]
+  "last_name" VARCHAR(255) [not null]
+  "phone_number" VARCHAR(255)
+  "street" VARCHAR(255) [not null]
+  "company" VARCHAR(255)
+  "city" VARCHAR(255) [not null]
+  "postcode" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "country_code" VARCHAR(255) [not null]
+  "province_code" VARCHAR(255)
+  "province_name" VARCHAR(255)
+}
+
+Table "sylius_adjustment" {
+  "id" INT [pk, not null, increment]
+  "order_id" INT
+  "order_item_id" INT
+  "order_item_unit_id" INT
+  "type" VARCHAR(255) [not null]
+  "label" VARCHAR(255)
+  "amount" INT [not null]
+  "is_neutral" TINYINT [not null]
+  "is_locked" TINYINT [not null]
+  "origin_code" VARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_admin_api_access_token" {
+  "id" INT [pk, not null, increment]
+  "client_id" INT
+  "user_id" INT
+  "token" VARCHAR(255) [not null]
+  "expires_at" INT
+  "scope" VARCHAR(255)
+}
+
+Table "sylius_admin_api_auth_code" {
+  "id" INT [pk, not null, increment]
+  "client_id" INT
+  "user_id" INT
+  "token" VARCHAR(255) [not null]
+  "redirect_uri" LONGTEXT [not null]
+  "expires_at" INT
+  "scope" VARCHAR(255)
+}
+
+Table "sylius_admin_api_client" {
+  "id" INT [pk, not null, increment]
+  "random_id" VARCHAR(255) [not null]
+  "redirect_uris" LONGTEXT [not null]
+  "secret" VARCHAR(255) [not null]
+  "allowed_grant_types" LONGTEXT [not null]
+}
+
+Table "sylius_admin_api_refresh_token" {
+  "id" INT [pk, not null, increment]
+  "client_id" INT
+  "user_id" INT
+  "token" VARCHAR(255) [not null]
+  "expires_at" INT
+  "scope" VARCHAR(255)
+}
+
+Table "sylius_admin_user" {
+  "id" INT [pk, not null, increment]
+  "username" VARCHAR(255)
+  "username_canonical" VARCHAR(255)
+  "enabled" TINYINT [not null]
+  "salt" VARCHAR(255) [not null]
+  "password" VARCHAR(255) [not null]
+  "last_login" DATETIME
+  "password_reset_token" VARCHAR(255)
+  "password_requested_at" DATETIME
+  "email_verification_token" VARCHAR(255)
+  "verified_at" DATETIME
+  "locked" TINYINT [not null]
+  "expires_at" DATETIME
+  "credentials_expire_at" DATETIME
+  "roles" LONGTEXT [not null]
+  "email" VARCHAR(255)
+  "email_canonical" VARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "first_name" VARCHAR(255)
+  "last_name" VARCHAR(255)
+  "locale_code" VARCHAR(255) [not null]
+  "encoder_name" VARCHAR(255)
+}
+
+Table "sylius_avatar_image" {
+  "id" INT [pk, not null, increment]
+  "owner_id" INT [not null]
+  "type" VARCHAR(255)
+  "path" VARCHAR(255) [not null]
+}
+
+Table "sylius_channel" {
+  "id" INT [pk, not null, increment]
+  "default_locale_id" INT [not null]
+  "base_currency_id" INT [not null]
+  "default_tax_zone_id" INT
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "color" VARCHAR(255)
+  "description" LONGTEXT
+  "enabled" TINYINT [not null]
+  "hostname" VARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "theme_name" VARCHAR(255)
+  "tax_calculation_strategy" VARCHAR(255) [not null]
+  "contact_email" VARCHAR(255)
+  "skipping_shipping_step_allowed" TINYINT [not null]
+  "skipping_payment_step_allowed" TINYINT [not null]
+  "account_verification_required" TINYINT [not null]
+  "shop_billing_data_id" INT
+  "type" VARCHAR(255)
+  "menu_taxon_id" INT
+}
+
+Table "sylius_channel_countries" {
+  "channel_id" INT [not null]
+  "country_id" INT [not null]
+}
+
+Table "sylius_channel_currencies" {
+  "channel_id" INT [not null]
+  "currency_id" INT [not null]
+}
+
+Table "sylius_channel_locales" {
+  "channel_id" INT [not null]
+  "locale_id" INT [not null]
+}
+
+Table "sylius_channel_pricing" {
+  "id" INT [pk, not null, increment]
+  "product_variant_id" INT [not null]
+  "price" INT [not null]
+  "original_price" INT
+  "channel_code" VARCHAR(255) [not null]
+}
+
+Table "sylius_country" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "enabled" TINYINT [not null]
+}
+
+Table "sylius_currency" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_customer" {
+  "id" INT [pk, not null, increment]
+  "customer_group_id" INT
+  "default_address_id" INT
+  "email" VARCHAR(255) [not null]
+  "email_canonical" VARCHAR(255) [not null]
+  "first_name" VARCHAR(255)
+  "last_name" VARCHAR(255)
+  "birthday" DATETIME
+  "gender" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "phone_number" VARCHAR(255)
+  "subscribed_to_newsletter" TINYINT [not null]
+}
+
+Table "sylius_exchange_rate" {
+  "id" INT [pk, not null, increment]
+  "source_currency" INT [not null]
+  "target_currency" INT [not null]
+  "ratio" DECIMAL(8,2) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_gateway_config" {
+  "id" INT [pk, not null, increment]
+  "gateway_name" VARCHAR(255) [not null]
+  "factory_name" VARCHAR(255) [not null]
+  "config" LONGTEXT [not null]
+}
+
+Table "sylius_locale" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_order" {
+  "id" INT [pk, not null, increment]
+  "shipping_address_id" INT
+  "billing_address_id" INT
+  "channel_id" INT
+  "promotion_coupon_id" INT
+  "customer_id" INT
+  "number" VARCHAR(255)
+  "notes" LONGTEXT
+  "state" VARCHAR(255) [not null]
+  "checkout_completed_at" DATETIME
+  "items_total" INT [not null]
+  "adjustments_total" INT [not null]
+  "total" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "currency_code" VARCHAR(255) [not null]
+  "locale_code" VARCHAR(255) [not null]
+  "checkout_state" VARCHAR(255) [not null]
+  "payment_state" VARCHAR(255) [not null]
+  "shipping_state" VARCHAR(255) [not null]
+  "token_value" VARCHAR(255)
+  "customer_ip" VARCHAR(255)
+}
+
+Table "sylius_order_item" {
+  "id" INT [pk, not null, increment]
+  "order_id" INT [not null]
+  "variant_id" INT [not null]
+  "quantity" INT [not null]
+  "unit_price" INT [not null]
+  "units_total" INT [not null]
+  "adjustments_total" INT [not null]
+  "total" INT [not null]
+  "is_immutable" TINYINT [not null]
+  "product_name" VARCHAR(255)
+  "variant_name" VARCHAR(255)
+}
+
+Table "sylius_order_item_unit" {
+  "id" INT [pk, not null, increment]
+  "order_item_id" INT [not null]
+  "shipment_id" INT
+  "adjustments_total" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_payment" {
+  "id" INT [pk, not null, increment]
+  "method_id" INT
+  "order_id" INT [not null]
+  "currency_code" VARCHAR(255) [not null]
+  "amount" INT [not null]
+  "state" VARCHAR(255) [not null]
+  "details" LONGTEXT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_payment_method" {
+  "id" INT [pk, not null, increment]
+  "gateway_config_id" INT
+  "code" VARCHAR(255) [not null]
+  "environment" VARCHAR(255)
+  "is_enabled" TINYINT [not null]
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_payment_method_channels" {
+  "payment_method_id" INT [not null]
+  "channel_id" INT [not null]
+}
+
+Table "sylius_payment_method_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "description" LONGTEXT
+  "instructions" LONGTEXT
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_product" {
+  "id" INT [pk, not null, increment]
+  "main_taxon_id" INT
+  "code" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "enabled" TINYINT [not null]
+  "variant_selection_method" VARCHAR(255) [not null]
+  "average_rating" DOUBLE [not null]
+}
+
+Table "sylius_product_association" {
+  "id" INT [pk, not null, increment]
+  "association_type_id" INT [not null]
+  "product_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_product_association_product" {
+  "association_id" INT [not null]
+  "product_id" INT [not null]
+}
+
+Table "sylius_product_association_type" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_product_association_type_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255)
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_attribute" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "storage_type" VARCHAR(255) [not null]
+  "configuration" LONGTEXT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "position" INT [not null]
+}
+
+Table "sylius_product_attribute_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_attribute_value" {
+  "id" INT [pk, not null, increment]
+  "product_id" INT [not null]
+  "attribute_id" INT [not null]
+  "locale_code" VARCHAR(255) [not null]
+  "text_value" LONGTEXT
+  "boolean_value" TINYINT
+  "integer_value" INT
+  "float_value" DOUBLE
+  "datetime_value" DATETIME
+  "date_value" DATE
+  "json_value" LONGTEXT
+}
+
+Table "sylius_product_channels" {
+  "product_id" INT [not null]
+  "channel_id" INT [not null]
+}
+
+Table "sylius_product_image" {
+  "id" INT [pk, not null, increment]
+  "owner_id" INT [not null]
+  "type" VARCHAR(255)
+  "path" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_image_product_variants" {
+  "image_id" INT [not null]
+  "variant_id" INT [not null]
+}
+
+Table "sylius_product_option" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_product_option_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_option_value" {
+  "id" INT [pk, not null, increment]
+  "option_id" INT [not null]
+  "code" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_option_value_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "value" VARCHAR(255) [not null]
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_options" {
+  "product_id" INT [not null]
+  "option_id" INT [not null]
+}
+
+Table "sylius_product_taxon" {
+  "id" INT [pk, not null, increment]
+  "product_id" INT [not null]
+  "taxon_id" INT [not null]
+  "position" INT [not null]
+}
+
+Table "sylius_product_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "description" LONGTEXT
+  "meta_keywords" VARCHAR(255)
+  "meta_description" VARCHAR(255)
+  "short_description" LONGTEXT
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_product_variant" {
+  "id" INT [pk, not null, increment]
+  "product_id" INT [not null]
+  "tax_category_id" INT
+  "shipping_category_id" INT
+  "code" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "position" INT [not null]
+  "version" INT [not null]
+  "on_hold" INT [not null]
+  "on_hand" INT [not null]
+  "tracked" TINYINT [not null]
+  "width" DOUBLE
+  "height" DOUBLE
+  "depth" DOUBLE
+  "weight" DOUBLE
+  "shipping_required" TINYINT [not null]
+}
+
+Table "sylius_product_variant_option_value" {
+  "variant_id" INT [not null]
+  "option_value_id" INT [not null]
+}
+
+Table "sylius_product_variant_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255)
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_promotion" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "description" VARCHAR(255)
+  "priority" INT [not null]
+  "exclusive" TINYINT [not null]
+  "usage_limit" INT
+  "used" INT [not null]
+  "coupon_based" TINYINT [not null]
+  "starts_at" DATETIME
+  "ends_at" DATETIME
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_promotion_action" {
+  "id" INT [pk, not null, increment]
+  "promotion_id" INT
+  "type" VARCHAR(255) [not null]
+  "configuration" LONGTEXT [not null]
+}
+
+Table "sylius_promotion_channels" {
+  "promotion_id" INT [not null]
+  "channel_id" INT [not null]
+}
+
+Table "sylius_promotion_coupon" {
+  "id" INT [pk, not null, increment]
+  "promotion_id" INT
+  "code" VARCHAR(255) [not null]
+  "usage_limit" INT
+  "used" INT [not null]
+  "expires_at" DATETIME
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "per_customer_usage_limit" INT
+  "reusable_from_cancelled_orders" TINYINT [not null]
+}
+
+Table "sylius_promotion_order" {
+  "order_id" INT [not null]
+  "promotion_id" INT [not null]
+}
+
+Table "sylius_promotion_rule" {
+  "id" INT [pk, not null, increment]
+  "promotion_id" INT
+  "type" VARCHAR(255) [not null]
+  "configuration" LONGTEXT [not null]
+}
+
+Table "sylius_province" {
+  "id" INT [pk, not null, increment]
+  "country_id" INT [not null]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "abbreviation" VARCHAR(255)
+}
+
+Table "sylius_shipment" {
+  "id" INT [pk, not null, increment]
+  "method_id" INT [not null]
+  "order_id" INT [not null]
+  "state" VARCHAR(255) [not null]
+  "tracking" VARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "shipped_at" DATETIME
+}
+
+Table "sylius_shipping_category" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "description" LONGTEXT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_shipping_method" {
+  "id" INT [pk, not null, increment]
+  "category_id" INT
+  "zone_id" INT [not null]
+  "tax_category_id" INT
+  "code" VARCHAR(255) [not null]
+  "configuration" LONGTEXT [not null]
+  "category_requirement" INT [not null]
+  "calculator" VARCHAR(255) [not null]
+  "is_enabled" TINYINT [not null]
+  "position" INT [not null]
+  "archived_at" DATETIME
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_shipping_method_channels" {
+  "shipping_method_id" INT [not null]
+  "channel_id" INT [not null]
+}
+
+Table "sylius_shipping_method_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "description" VARCHAR(255)
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_shop_billing_data" {
+  "id" INT [pk, not null, increment]
+  "company" VARCHAR(255)
+  "tax_id" VARCHAR(255)
+  "country_code" VARCHAR(255)
+  "street" VARCHAR(255)
+  "city" VARCHAR(255)
+  "postcode" VARCHAR(255)
+}
+
+Table "sylius_shop_user" {
+  "id" INT [pk, not null, increment]
+  "customer_id" INT [not null]
+  "username" VARCHAR(255)
+  "username_canonical" VARCHAR(255)
+  "enabled" TINYINT [not null]
+  "salt" VARCHAR(255) [not null]
+  "password" VARCHAR(255) [not null]
+  "last_login" DATETIME
+  "password_reset_token" VARCHAR(255)
+  "password_requested_at" DATETIME
+  "email_verification_token" VARCHAR(255)
+  "verified_at" DATETIME
+  "locked" TINYINT [not null]
+  "expires_at" DATETIME
+  "credentials_expire_at" DATETIME
+  "roles" LONGTEXT [not null]
+  "email" VARCHAR(255)
+  "email_canonical" VARCHAR(255)
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+  "encoder_name" VARCHAR(255)
+}
+
+Table "sylius_tax_category" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "description" LONGTEXT
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_tax_rate" {
+  "id" INT [pk, not null, increment]
+  "category_id" INT [not null]
+  "zone_id" INT [not null]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "amount" DECIMAL(8,2) [not null]
+  "included_in_price" TINYINT [not null]
+  "calculator" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_taxon" {
+  "id" INT [pk, not null, increment]
+  "tree_root" INT
+  "parent_id" INT
+  "code" VARCHAR(255) [not null]
+  "tree_left" INT [not null]
+  "tree_right" INT [not null]
+  "tree_level" INT [not null]
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME
+}
+
+Table "sylius_taxon_image" {
+  "id" INT [pk, not null, increment]
+  "owner_id" INT [not null]
+  "type" VARCHAR(255)
+  "path" VARCHAR(255) [not null]
+}
+
+Table "sylius_taxon_translation" {
+  "id" INT [pk, not null, increment]
+  "translatable_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "description" LONGTEXT
+  "locale" VARCHAR(255) [not null]
+}
+
+Table "sylius_user_oauth" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT
+  "provider" VARCHAR(255) [not null]
+  "identifier" VARCHAR(255) [not null]
+  "access_token" VARCHAR(255)
+  "refresh_token" VARCHAR(255)
+}
+
+Table "sylius_zone" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "scope" VARCHAR(255)
+}
+
+Table "sylius_zone_member" {
+  "id" INT [pk, not null, increment]
+  "belongs_to" INT
+  "code" VARCHAR(255) [not null]
+}
+
+Ref:"sylius_customer"."id" < "sylius_address"."customer_id"
+
+Ref:"sylius_order"."id" < "sylius_adjustment"."order_id"
+
+Ref:"sylius_order_item"."id" < "sylius_adjustment"."order_item_id"
+
+Ref:"sylius_order_item_unit"."id" < "sylius_adjustment"."order_item_unit_id"
+
+Ref:"sylius_admin_api_client"."id" < "sylius_admin_api_access_token"."client_id"
+
+Ref:"sylius_admin_user"."id" < "sylius_admin_api_access_token"."user_id"
+
+Ref:"sylius_admin_api_client"."id" < "sylius_admin_api_auth_code"."client_id"
+
+Ref:"sylius_admin_user"."id" < "sylius_admin_api_auth_code"."user_id"
+
+Ref:"sylius_admin_api_client"."id" < "sylius_admin_api_refresh_token"."client_id"
+
+Ref:"sylius_admin_user"."id" < "sylius_admin_api_refresh_token"."user_id"
+
+Ref:"sylius_admin_user"."id" < "sylius_avatar_image"."owner_id"
+
+Ref:"sylius_locale"."id" < "sylius_channel"."default_locale_id"
+
+Ref:"sylius_currency"."id" < "sylius_channel"."base_currency_id"
+
+Ref:"sylius_zone"."id" < "sylius_channel"."default_tax_zone_id"
+
+Ref:"sylius_shop_billing_data"."id" < "sylius_channel"."shop_billing_data_id"
+
+Ref:"sylius_taxon"."id" < "sylius_channel"."menu_taxon_id"
+
+Ref:"sylius_channel"."id" < "sylius_channel_countries"."channel_id"
+
+Ref:"sylius_country"."id" < "sylius_channel_countries"."country_id"
+
+Ref:"sylius_channel"."id" < "sylius_channel_currencies"."channel_id"
+
+Ref:"sylius_currency"."id" < "sylius_channel_currencies"."currency_id"
+
+Ref:"sylius_channel"."id" < "sylius_channel_locales"."channel_id"
+
+Ref:"sylius_locale"."id" < "sylius_channel_locales"."locale_id"
+
+Ref:"sylius_product_variant"."id" < "sylius_channel_pricing"."product_variant_id"
+
+Ref:"sylius_customer_group"."id" < "sylius_customer"."customer_group_id"
+
+Ref:"sylius_address"."id" < "sylius_customer"."default_address_id"
+
+Ref:"sylius_currency"."id" < "sylius_exchange_rate"."source_currency"
+
+Ref:"sylius_currency"."id" < "sylius_exchange_rate"."target_currency"
+
+Ref:"sylius_address"."id" < "sylius_order"."shipping_address_id"
+
+Ref:"sylius_address"."id" < "sylius_order"."billing_address_id"
+
+Ref:"sylius_channel"."id" < "sylius_order"."channel_id"
+
+Ref:"sylius_promotion_coupon"."id" < "sylius_order"."promotion_coupon_id"
+
+Ref:"sylius_customer"."id" < "sylius_order"."customer_id"
+
+Ref:"sylius_order"."id" < "sylius_order_item"."order_id"
+
+Ref:"sylius_product_variant"."id" < "sylius_order_item"."variant_id"
+
+Ref:"sylius_order_item"."id" < "sylius_order_item_unit"."order_item_id"
+
+Ref:"sylius_shipment"."id" < "sylius_order_item_unit"."shipment_id"
+
+Ref:"sylius_payment_method"."id" < "sylius_payment"."method_id"
+
+Ref:"sylius_order"."id" < "sylius_payment"."order_id"
+
+Ref:"sylius_gateway_config"."id" < "sylius_payment_method"."gateway_config_id"
+
+Ref:"sylius_payment_method"."id" < "sylius_payment_method_channels"."payment_method_id"
+
+Ref:"sylius_channel"."id" < "sylius_payment_method_channels"."channel_id"
+
+Ref:"sylius_payment_method"."id" < "sylius_payment_method_translation"."translatable_id"
+
+Ref:"sylius_taxon"."id" < "sylius_product"."main_taxon_id"
+
+Ref:"sylius_product_association_type"."id" < "sylius_product_association"."association_type_id"
+
+Ref:"sylius_product"."id" < "sylius_product_association"."product_id"
+
+Ref:"sylius_product_association"."id" < "sylius_product_association_product"."association_id"
+
+Ref:"sylius_product"."id" < "sylius_product_association_product"."product_id"
+
+Ref:"sylius_product_association_type"."id" < "sylius_product_association_type_translation"."translatable_id"
+
+Ref:"sylius_product_attribute"."id" < "sylius_product_attribute_translation"."translatable_id"
+
+Ref:"sylius_product"."id" < "sylius_product_attribute_value"."product_id"
+
+Ref:"sylius_product_attribute"."id" < "sylius_product_attribute_value"."attribute_id"
+
+Ref:"sylius_product"."id" < "sylius_product_channels"."product_id"
+
+Ref:"sylius_channel"."id" < "sylius_product_channels"."channel_id"
+
+Ref:"sylius_product"."id" < "sylius_product_image"."owner_id"
+
+Ref:"sylius_product_image"."id" < "sylius_product_image_product_variants"."image_id"
+
+Ref:"sylius_product_variant"."id" < "sylius_product_image_product_variants"."variant_id"
+
+Ref:"sylius_product_option"."id" < "sylius_product_option_translation"."translatable_id"
+
+Ref:"sylius_product_option"."id" < "sylius_product_option_value"."option_id"
+
+Ref:"sylius_product_option_value"."id" < "sylius_product_option_value_translation"."translatable_id"
+
+Ref:"sylius_product"."id" < "sylius_product_options"."product_id"
+
+Ref:"sylius_product_option"."id" < "sylius_product_options"."option_id"
+
+Ref:"sylius_product"."id" < "sylius_product_taxon"."product_id"
+
+Ref:"sylius_taxon"."id" < "sylius_product_taxon"."taxon_id"
+
+Ref:"sylius_product"."id" < "sylius_product_translation"."translatable_id"
+
+Ref:"sylius_product"."id" < "sylius_product_variant"."product_id"
+
+Ref:"sylius_tax_category"."id" < "sylius_product_variant"."tax_category_id"
+
+Ref:"sylius_shipping_category"."id" < "sylius_product_variant"."shipping_category_id"
+
+Ref:"sylius_product_variant"."id" < "sylius_product_variant_option_value"."variant_id"
+
+Ref:"sylius_product_option_value"."id" < "sylius_product_variant_option_value"."option_value_id"
+
+Ref:"sylius_product_variant"."id" < "sylius_product_variant_translation"."translatable_id"
+
+Ref:"sylius_promotion"."id" < "sylius_promotion_action"."promotion_id"
+
+Ref:"sylius_promotion"."id" < "sylius_promotion_channels"."promotion_id"
+
+Ref:"sylius_channel"."id" < "sylius_promotion_channels"."channel_id"
+
+Ref:"sylius_promotion"."id" < "sylius_promotion_coupon"."promotion_id"
+
+Ref:"sylius_order"."id" < "sylius_promotion_order"."order_id"
+
+Ref:"sylius_promotion"."id" < "sylius_promotion_order"."promotion_id"
+
+Ref:"sylius_promotion"."id" < "sylius_promotion_rule"."promotion_id"
+
+Ref:"sylius_country"."id" < "sylius_province"."country_id"
+
+Ref:"sylius_shipping_method"."id" < "sylius_shipment"."method_id"
+
+Ref:"sylius_order"."id" < "sylius_shipment"."order_id"
+
+Ref:"sylius_shipping_category"."id" < "sylius_shipping_method"."category_id"
+
+Ref:"sylius_zone"."id" < "sylius_shipping_method"."zone_id"
+
+Ref:"sylius_tax_category"."id" < "sylius_shipping_method"."tax_category_id"
+
+Ref:"sylius_shipping_method"."id" < "sylius_shipping_method_channels"."shipping_method_id"
+
+Ref:"sylius_channel"."id" < "sylius_shipping_method_channels"."channel_id"
+
+Ref:"sylius_shipping_method"."id" < "sylius_shipping_method_translation"."translatable_id"
+
+Ref:"sylius_customer"."id" < "sylius_shop_user"."customer_id"
+
+Ref:"sylius_tax_category"."id" < "sylius_tax_rate"."category_id"
+
+Ref:"sylius_zone"."id" < "sylius_tax_rate"."zone_id"
+
+Ref:"sylius_taxon"."id" < "sylius_taxon"."tree_root"
+
+Ref:"sylius_taxon"."id" < "sylius_taxon"."parent_id"
+
+Ref:"sylius_taxon"."id" < "sylius_taxon_image"."owner_id"
+
+Ref:"sylius_taxon"."id" < "sylius_taxon_translation"."translatable_id"
+
+Ref:"sylius_shop_user"."id" < "sylius_user_oauth"."user_id"
+
+Ref:"sylius_zone"."id" < "sylius_zone_member"."belongs_to"

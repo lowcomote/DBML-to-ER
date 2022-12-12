@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_customuser" links="//@modules.0/@modularizableElements.23/@linksToEntities.0 //@modules.0/@modularizableElements.23/@linksToEntities.1 //@modules.0/@modularizableElements.24/@linksToEntities.1 //@modules.0/@modularizableElements.25/@linksToEntities.0 //@modules.0/@modularizableElements.27/@linksToEntities.0 //@modules.0/@modularizableElements.29/@linksToEntities.0 //@modules.0/@modularizableElements.30/@linksToEntities.0 //@modules.0/@modularizableElements.31/@linksToEntities.0 //@modules.0/@modularizableElements.36/@linksToEntities.0 //@modules.0/@modularizableElements.37/@linksToEntities.0 //@modules.0/@modularizableElements.42/@linksToEntities.0 //@modules.0/@modularizableElements.45/@linksToEntities.0 //@modules.0/@modularizableElements.48/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_login" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_superuser" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_staff" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_active" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_joined" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="karma" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="about"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="level" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lft" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="rght" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tree_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="used_invitation_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_customuser_groups" links="//@modules.0/@modularizableElements.25/@linksToEntities.1 //@modules.0/@modularizableElements.26/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customuser_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_customuser_user_permissions" links="//@modules.0/@modularizableElements.27/@linksToEntities.1 //@modules.0/@modularizableElements.28/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customuser_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_emailverification" links="//@modules.0/@modularizableElements.29/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verification_code"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_invitation" links="//@modules.0/@modularizableElements.24/@linksToEntities.0 //@modules.0/@modularizableElements.30/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="num_signups" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invited_email_address"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invite_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="inviting_user_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_passwordresetrequest" links="//@modules.0/@modularizableElements.31/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verification_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_group" links="//@modules.0/@modularizableElements.26/@linksToEntities.0 //@modules.0/@modularizableElements.32/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_group_permissions" links="//@modules.0/@modularizableElements.32/@linksToEntities.1 //@modules.0/@modularizableElements.33/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="permission_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_permission" links="//@modules.0/@modularizableElements.28/@linksToEntities.0 //@modules.0/@modularizableElements.33/@linksToEntities.0 //@modules.0/@modularizableElements.34/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="codename"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_admin_log" links="//@modules.0/@modularizableElements.35/@linksToEntities.1 //@modules.0/@modularizableElements.36/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_time" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_repr"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_flag"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="change_message"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_type_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_content_type" links="//@modules.0/@modularizableElements.34/@linksToEntities.0 //@modules.0/@modularizableElements.35/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app_label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="model"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_migrations">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="applied" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="django_session">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="session_data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expire_date" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="emaildigest_anonymoussubscription" links="//@modules.0/@modularizableElements.37/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscription_ptr_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verified_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verification_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="logged_in_user_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="emaildigest_emaildigest" links="//@modules.0/@modularizableElements.38/@linksToEntities.0 //@modules.0/@modularizableElements.40/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="frequency"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="weekly_weekday"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="emaildigest_emaildigest_stories" links="//@modules.0/@modularizableElements.38/@linksToEntities.1 //@modules.0/@modularizableElements.39/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="emaildigest_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="story_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="emaildigest_subscription" links="//@modules.0/@modularizableElements.41/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="frequency"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="weekly_weekday"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="verfied_email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_active" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="emaildigest_unsubscription" links="//@modules.0/@modularizableElements.40/@linksToEntities.1 //@modules.0/@modularizableElements.41/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="from_digest_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscription_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="emaildigest_usersubscription" links="//@modules.0/@modularizableElements.42/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscription_ptr_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="news_comment" links="//@modules.0/@modularizableElements.43/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_ptr_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="text"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="to_story_id"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="news_item" links="//@modules.0/@modularizableElements.44/@linksToEntities.0 //@modules.0/@modularizableElements.44/@linksToEntities.1 //@modules.0/@modularizableElements.45/@linksToEntities.1 //@modules.0/@modularizableElements.47/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="upvotes" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="downvotes" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="points" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="num_comments" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="lft" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="rght" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tree_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="level" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_ask" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_show" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="news_story" links="//@modules.0/@modularizableElements.39/@linksToEntities.0 //@modules.0/@modularizableElements.43/@linksToEntities.0 //@modules.0/@modularizableElements.46/@linksToEntities.0 //@modules.0/@modularizableElements.46/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_ptr_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="text"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="duplicate_of_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="domain"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="news_vote" links="//@modules.0/@modularizableElements.47/@linksToEntities.1 //@modules.0/@modularizableElements.48/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="changed_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="vote"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - accounts_customuser:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_invitation:id - accounts_customuser:used_invitation_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - accounts_customuser_groups:customuser_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - accounts_customuser_groups:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - accounts_customuser_user_permissions:customuser_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - accounts_customuser_user_permissions:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - accounts_emailverification:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - accounts_invitation:inviting_user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - accounts_passwordresetrequest:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_group:id - auth_group_permissions:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_permission:id - auth_group_permissions:permission_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - auth_permission:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="django_content_type:id - django_admin_log:content_type_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - django_admin_log:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - emaildigest_anonymoussubscription:logged_in_user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="emaildigest_emaildigest:id - emaildigest_emaildigest_stories:emaildigest_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="news_story:item_ptr_id - emaildigest_emaildigest_stories:story_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="emaildigest_emaildigest:id - emaildigest_unsubscription:from_digest_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="emaildigest_subscription:id - emaildigest_unsubscription:subscription_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.17"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - emaildigest_usersubscription:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="news_story:item_ptr_id - news_comment:to_story_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="news_item:id - news_item:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - news_item:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="news_story:item_ptr_id - news_story:duplicate_of_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.21"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="news_item:id - news_vote:item_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.20"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_customuser:id - news_vote:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.22"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

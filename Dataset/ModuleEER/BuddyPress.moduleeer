@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_notifications" links="//@modules.0/@modularizableElements.20/@linksToEntities.0 //@modules.0/@modularizableElements.21/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="secondary_item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="component_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="component_action"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_notified" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_new" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_notifications_meta" links="//@modules.0/@modularizableElements.20/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="notification_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_activity" links="//@modules.0/@modularizableElements.22/@linksToEntities.0 //@modules.0/@modularizableElements.23/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="component"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="primary_link"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="secondary_item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_recorded" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="hide_sitewide" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="mptt_left" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="mptt_right" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_spam" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_activity_meta" links="//@modules.0/@modularizableElements.22/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="activity_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_friends" links="//@modules.0/@modularizableElements.24/@linksToEntities.1 //@modules.0/@modularizableElements.25/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="initiator_user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="friend_user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_confirmed" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_limited" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_created" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_groups" links="//@modules.0/@modularizableElements.26/@linksToEntities.0 //@modules.0/@modularizableElements.26/@linksToEntities.1 //@modules.0/@modularizableElements.27/@linksToEntities.1 //@modules.0/@modularizableElements.28/@linksToEntities.0 //@modules.0/@modularizableElements.30/@linksToEntities.0 //@modules.0/@modularizableElements.33/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="creator_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="enable_forum" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_created" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_groups_members" links="//@modules.0/@modularizableElements.28/@linksToEntities.1 //@modules.0/@modularizableElements.29/@linksToEntities.1 //@modules.0/@modularizableElements.43/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="inviter_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_admin" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_mod" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_modified" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="comments"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_confirmed" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_banned" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invite_sent" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_groups_groupmeta" links="//@modules.0/@modularizableElements.30/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_messages_messages" links="//@modules.0/@modularizableElements.31/@linksToEntities.1 //@modules.0/@modularizableElements.32/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="thread_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sender_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subject"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="message"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_sent" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_messages_recipients" links="//@modules.0/@modularizableElements.41/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="thread_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="unread_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sender_only" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_deleted" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_messages_notices">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subject"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="message"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_sent" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_active" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_messages_meta" links="//@modules.0/@modularizableElements.32/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="message_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_xprofile_groups">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="can_delete" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_xprofile_fields" links="//@modules.0/@modularizableElements.33/@linksToEntities.1 //@modules.0/@modularizableElements.34/@linksToEntities.0 //@modules.0/@modularizableElements.34/@linksToEntities.1 //@modules.0/@modularizableElements.36/@linksToEntities.0 //@modules.0/@modularizableElements.38/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="group_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_required" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_default_option" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="field_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="option_order" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="order_by"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="can_delete" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_xprofile_data" links="//@modules.0/@modularizableElements.35/@linksToEntities.0 //@modules.0/@modularizableElements.36/@linksToEntities.1 //@modules.0/@modularizableElements.37/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="field_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_updated" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_xprofile_meta" links="//@modules.0/@modularizableElements.35/@linksToEntities.1 //@modules.0/@modularizableElements.38/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="object_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_user_blogs" links="//@modules.0/@modularizableElements.42/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="blog_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_user_blogs_blogmeta">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="blog_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="meta_value"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="bp_invitations" links="//@modules.0/@modularizableElements.39/@linksToEntities.1 //@modules.0/@modularizableElements.40/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="inviter_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invitee_email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="class"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="secondary_item_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_modified" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invite_sent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="accepted" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="wp_users" links="//@modules.0/@modularizableElements.21/@linksToEntities.0 //@modules.0/@modularizableElements.23/@linksToEntities.0 //@modules.0/@modularizableElements.24/@linksToEntities.0 //@modules.0/@modularizableElements.25/@linksToEntities.0 //@modules.0/@modularizableElements.27/@linksToEntities.0 //@modules.0/@modularizableElements.29/@linksToEntities.0 //@modules.0/@modularizableElements.31/@linksToEntities.0 //@modules.0/@modularizableElements.37/@linksToEntities.0 //@modules.0/@modularizableElements.39/@linksToEntities.0 //@modules.0/@modularizableElements.40/@linksToEntities.0 //@modules.0/@modularizableElements.41/@linksToEntities.0 //@modules.0/@modularizableElements.42/@linksToEntities.0 //@modules.0/@modularizableElements.43/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_notifications:id - bp_notifications_meta:notification_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_notifications:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_activity:id - bp_activity_meta:activity_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_activity:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_friends:initiator_user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_friends:friend_user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_groups:id - bp_groups:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_groups:creator_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_groups:id - bp_groups_members:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_groups_members:inviter_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_groups:id - bp_groups_groupmeta:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_messages_messages:sender_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_messages_messages:id - bp_messages_meta:message_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_groups:id - bp_xprofile_fields:group_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_xprofile_fields:id - bp_xprofile_fields:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_xprofile_data:id - bp_xprofile_meta:object_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_xprofile_fields:id - bp_xprofile_data:field_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_xprofile_data:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.14"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="bp_xprofile_fields:id - bp_xprofile_meta:object_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.13"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.15"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_invitations:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_invitations:inviter_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.18"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_messages_recipients:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_user_blogs:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.16"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="wp_users:id - bp_groups_members:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.19"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

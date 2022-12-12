@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_sites" links="//@modules.0/@modularizableElements.10/@linksToEntities.0 //@modules.0/@modularizableElements.11/@linksToEntities.0 //@modules.0/@modularizableElements.12/@linksToEntities.0 //@modules.0/@modularizableElements.17/@linksToEntities.0 //@modules.0/@modularizableElements.25/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="hostname"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_layouts" links="//@modules.0/@modularizableElements.10/@linksToEntities.1 //@modules.0/@modularizableElements.13/@linksToEntities.0 //@modules.0/@modularizableElements.13/@linksToEntities.1 //@modules.0/@modularizableElements.14/@linksToEntities.0 //@modules.0/@modularizableElements.18/@linksToEntities.0 //@modules.0/@modularizableElements.20/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="app_layout"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="css"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="js"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_pages" links="//@modules.0/@modularizableElements.15/@linksToEntities.0 //@modules.0/@modularizableElements.15/@linksToEntities.1 //@modules.0/@modularizableElements.16/@linksToEntities.0 //@modules.0/@modularizableElements.17/@linksToEntities.1 //@modules.0/@modularizableElements.18/@linksToEntities.1 //@modules.0/@modularizableElements.19/@linksToEntities.0 //@modules.0/@modularizableElements.26/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="layout_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="parent_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="target_page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="slug"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="full_path"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_cache"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="children_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_published" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_translations" links="//@modules.0/@modularizableElements.19/@linksToEntities.1 //@modules.0/@modularizableElements.20/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="locale"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="layout_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content_cache"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_published" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_fragments">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="recordable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="recordable_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="boolean" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="datetime" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_snippets" links="//@modules.0/@modularizableElements.11/@linksToEntities.1 //@modules.0/@modularizableElements.21/@linksToEntities.0 //@modules.0/@modularizableElements.22/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="identifier"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_files" links="//@modules.0/@modularizableElements.12/@linksToEntities.1 //@modules.0/@modularizableElements.23/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="description"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="position" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="udpated_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_revisions" links="//@modules.0/@modularizableElements.14/@linksToEntities.1 //@modules.0/@modularizableElements.16/@linksToEntities.1 //@modules.0/@modularizableElements.21/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="record_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="record_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_categories" links="//@modules.0/@modularizableElements.24/@linksToEntities.0 //@modules.0/@modularizableElements.25/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="categorized_type"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="comfy_cms_categorizations" links="//@modules.0/@modularizableElements.22/@linksToEntities.1 //@modules.0/@modularizableElements.23/@linksToEntities.1 //@modules.0/@modularizableElements.24/@linksToEntities.1 //@modules.0/@modularizableElements.26/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="categorized_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="categorized_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_sites:id - comfy_cms_layouts:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_sites:id - comfy_cms_snippets:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_sites:id - comfy_cms_files:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_layouts:id - comfy_cms_layouts:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_layouts:id - comfy_cms_revisions:record_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_pages:id - comfy_cms_pages:parent_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_pages:id - comfy_cms_revisions:record_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_sites:id - comfy_cms_pages:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_layouts:id - comfy_cms_pages:layout_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_pages:id - comfy_cms_translations:page_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_layouts:id - comfy_cms_translations:layout_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_snippets:id - comfy_cms_revisions:record_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_snippets:id - comfy_cms_categorizations:categorized_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_files:id - comfy_cms_categorizations:categorized_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_categories:id - comfy_cms_categorizations:category_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_sites:id - comfy_cms_categories:site_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="comfy_cms_pages:id - comfy_cms_categorizations:categorized_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.9"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

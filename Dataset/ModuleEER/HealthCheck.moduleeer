@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_profile" links="//@modules.0/@modularizableElements.12/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="next_report_date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="reports_allowed" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ping_log_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="check_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_sms_date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sms_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sms_sent" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="team_limit" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sort"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="nag_period" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="next_nag_date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="deletion_notice_date" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_active_date" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_project" links="//@modules.0/@modularizableElements.13/@linksToEntities.1 //@modules.0/@modularizableElements.15/@linksToEntities.0 //@modules.0/@modularizableElements.16/@linksToEntities.0 //@modules.0/@modularizableElements.19/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="api_key"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="api_key_readonly"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="badge_key"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="accounts_member" links="//@modules.0/@modularizableElements.14/@linksToEntities.1 //@modules.0/@modularizableElements.15/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="project_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_channel" links="//@modules.0/@modularizableElements.16/@linksToEntities.1 //@modules.0/@modularizableElements.17/@linksToEntities.0 //@modules.0/@modularizableElements.21/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="kind"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email_verified" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="project_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_error"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_channel_checks" links="//@modules.0/@modularizableElements.17/@linksToEntities.1 //@modules.0/@modularizableElements.18/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="check_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_check" links="//@modules.0/@modularizableElements.18/@linksToEntities.0 //@modules.0/@modularizableElements.19/@linksToEntities.1 //@modules.0/@modularizableElements.20/@linksToEntities.0 //@modules.0/@modularizableElements.22/@linksToEntities.0 //@modules.0/@modularizableElements.23/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_ping" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="alert_after" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="timeout" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="grace" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tags"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="n_pings" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="kind"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="schedule"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tz"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="has_confirmation_link" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_ping_was_fail" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="desc"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_start" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subject"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="project_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_duration" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="methods"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_flip" links="//@modules.0/@modularizableElements.20/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="processed" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="old_status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="new_status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_notification" links="//@modules.0/@modularizableElements.21/@linksToEntities.1 //@modules.0/@modularizableElements.22/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="check_status"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="channel_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="error"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="code"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_ping" links="//@modules.0/@modularizableElements.23/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="remote_addr"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="method"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="ua"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="owner_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="scheme"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="n" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="body"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="kind"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="api_tokenbucket">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="value"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tokens"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="auth_user" links="//@modules.0/@modularizableElements.12/@linksToEntities.0 //@modules.0/@modularizableElements.13/@linksToEntities.0 //@modules.0/@modularizableElements.14/@linksToEntities.0 //@modules.0/@modularizableElements.24/@linksToEntities.0">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_login" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_superuser" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="username"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="first_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_staff" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="is_active" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="date_joined" type="DATE"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="payments_subscription" links="//@modules.0/@modularizableElements.24/@linksToEntities.1">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="payment_method_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscription_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="plan_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="address_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="send_invoices" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="plan_name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="invoice_email"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - accounts_profile:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.0"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - accounts_project:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - accounts_member:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_project:id - accounts_member:project_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.2"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_project:id - api_channel:project_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="api_channel:id - api_channel_checks:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="api_check:id - api_channel_checks:check_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.4"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="accounts_project:id - api_check:project_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.1"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="api_check:id - api_flip:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.6"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="api_channel:id - api_notification:channel_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.3"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="api_check:id - api_notification:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.7"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="api_check:id - api_ping:owner_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.5"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.8"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:RelationshipType" name="auth_user:id - payments_subscription:user_id">
+      <linksToEntities entity="//@modules.0/@modularizableElements.10"/>
+      <linksToEntities entity="//@modules.0/@modularizableElements.11"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

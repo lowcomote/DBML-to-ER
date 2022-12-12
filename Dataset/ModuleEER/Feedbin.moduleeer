@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<moduleeer:MEERModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:moduleeer="http://moduleeer/1.0">
+  <modules>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="actions">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="actions"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_ids"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="all_feeds"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_ids" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="action_type" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="computed_feed_ids" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="authentication_tokens">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="purpose" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="billing_events">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="details"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="event_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billable_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="billable_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="event_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="info"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="coupons">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="coupon_code"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="sent_to"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="redeemed"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="deleted_users">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="devices">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="model"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="device_type" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="operating_system"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="entries">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="author"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="summary"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="content"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="published"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="public_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="old_public_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="starred_entreis_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="original"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="source"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="image_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="processed_image_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="image"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="recently_played_entries_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="thread_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="settings"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="favicons">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="host"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="favicon"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="data"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="feed_stats">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="day" type="DATE"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entries_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="feeds">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="site_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="etag"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_modified"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="subscriptions_count" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="protected"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="push_expiration"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_published_entry"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="host"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="self_url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_type" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="options"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="import_items">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="import_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="details"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="item_type"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="status" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="imports">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="complete"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="upload"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="in_app_purchases">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="transaction_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="purchase_date"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="receipt"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="response"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="newsletter_senders">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="full_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="plans">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="stripe_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="price" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="price_tier" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="recently_played_entries">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="progress" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="duration" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="recently_read_entries">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="saved_searches">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="query"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="sharing_services">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="label"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="url"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="starred_entries">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="published"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="source"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="subscriptions">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="title"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="view_inline"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="active"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="push"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="show_updates"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="muted"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="show_retweets"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="media_only"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="kind" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="view_mode" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="suggested_categories">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="suggested_feeds">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="suggested_category_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="supported_sharing_services">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="service_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="settings"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="service_options"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="taggings">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_id" type="INTEGER"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="tags">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="name"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="unreads">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="published"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="updated_entries">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="user_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="entry_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="feed_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="published"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+    </modularizableElements>
+    <modularizableElements xsi:type="moduleeer:EntityType" name="users">
+      <attributes xsi:type="moduleeer:SingleAttribute" name="id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="email"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_digest"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="customer_id"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="last_4_digits"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="plan_id" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="admin"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="suspended"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="created_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="updated_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="auth_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_reset_token" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="password_reset_sent_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="settings"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="starred_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="inbound_email_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="tag_visibility"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="expires_at"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="newsletter_token"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="price_tier" type="INTEGER"/>
+      <attributes xsi:type="moduleeer:SingleAttribute" name="page_token"/>
+    </modularizableElements>
+  </modules>
+</moduleeer:MEERModel>

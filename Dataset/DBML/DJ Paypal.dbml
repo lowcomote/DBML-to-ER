@@ -1,0 +1,223 @@
+Table "djpaypal_billingagreement" {
+  "id" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "state" VARCHAR(255) [not null]
+  "description" VARCHAR(255) [not null]
+  "agreement_details" json [not null]
+  "payer" json [not null]
+  "shipping_address" json
+  "override_merchant_preferences" json [not null]
+  "override_charge_mode" json [not null]
+  "plan" json [not null]
+  "merchant" json
+  "payer_model_id" VARCHAR(255)
+  "user_id" INTEGER
+  "plan_model_id" VARCHAR(255)
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "start_date" timestamp(0) [not null]
+  "end_of_period" timestamp(0) [not null]
+}
+
+Table "djpaypal_billingplan" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "name" VARCHAR(255) [not null]
+  "description" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "state" VARCHAR(255) [not null]
+  "create_time" timestamp(0) [not null]
+  "update_time" timestamp(0) [not null]
+  "merchant_preferences" json [not null]
+}
+
+Table "djpaypal_billingplan_payment_definitions" {
+  "id" INTEGER [not null]
+  "billingplan_id" VARCHAR(255) [not null]
+  "paymentdefinition_id" VARCHAR(255) [not null]
+
+Indexes {
+  (billingplan_id, paymentdefinition_id) [name: "djpaypal_billingplan_payment_definitions_billingplan_id_paymentdefinition_id_index"]
+}
+}
+
+Table "djpaypal_chargemodel" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "type" VARCHAR(255) [not null]
+  "amount" json [not null]
+}
+
+Table "djpaypal_dispute" {
+  "dispute_id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "create_time" timestamp(0) [not null]
+  "update_time" timestamp(0) [not null]
+  "disputed_transactions" json [not null]
+  "reason" VARCHAR(255) [not null]
+  "status" VARCHAR(255) [not null]
+  "dispute_amount" json [not null]
+  "dispute_outcome" json
+  "messages" json
+  "seller_response_due_date" timestamp(0) [not null]
+  "dispute_flow" VARCHAR(255) [not null]
+  "dispute_channel" VARCHAR(255) [not null]
+  "dispute_life_cycle_stage" VARCHAR(255) [not null]
+  "offer" json
+  "buyer_response_due_date" timestamp(0) [not null]
+  "refund_details" json
+}
+
+Table "djpaypal_payer" {
+  "id" VARCHAR(255) [not null]
+  "first_name" VARCHAR(255) [not null]
+  "last_name" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "shipping_address" json
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "user_id" INTEGER
+  "time_created" timestamp(0) [not null]
+}
+
+Table "djpaypal_payment" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "intent" VARCHAR(255) [not null]
+  "cart" VARCHAR(255)
+  "payer" json
+  "transactions" json [not null]
+  "state" VARCHAR(255) [not null]
+  "experience_profile_id" VARCHAR(255) [not null]
+  "note_to_payer" VARCHAR(255) [not null]
+  "create_time" timestamp(0) [not null]
+  "update_time" timestamp(0) [not null]
+  "redirect_urls" json [not null]
+  "failure_reason" VARCHAR(255) [not null]
+}
+
+Table "djpaypal_paymentdefinition" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "name" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "frequency_interval" SMALLINT [not null]
+  "frequency" VARCHAR(255) [not null]
+  "cycles" SMALLINT [not null]
+  "amount" json [not null]
+}
+
+Table "djpaypal_paymentdefinition_charge_models" {
+  "id" INTEGER [not null]
+  "paymentdefinition_id" VARCHAR(255) [not null]
+  "chargemodel_id" VARCHAR(255) [not null]
+
+Indexes {
+  (paymentdefinition_id, chargemodel_id) [name: "djpaypal_paymentdefinition_charge_models_paymentdefinition_id_chargemodel_id_index"]
+}
+}
+
+Table "djpaypal_preparedbillingagreement" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "data" json [not null]
+  "executed_at" timestamp(0) [not null]
+  "canceled_at" timestamp(0) [not null]
+  "created" timestamp(0) [not null]
+  "updated" timestamp(0) [not null]
+  "executed_agreement_id" VARCHAR(255)
+  "user_id" INTEGER [not null]
+}
+
+Table "djpaypal_refund" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "amount" json [not null]
+  "state" VARCHAR(255) [not null]
+  "reason" TEXT [not null]
+  "invoice_number" VARCHAR(255) [not null]
+  "description" TEXT [not null]
+  "create_time" timestamp(0) [not null]
+  "update_time" timestamp(0) [not null]
+  "reason_code" VARCHAR(255) [not null]
+  "refund_reason_code" VARCHAR(255) [not null]
+  "refund_funding_type" VARCHAR(255) [not null]
+  "parent_payment_id" VARCHAR(255)
+  "sale_id" VARCHAR(255) [not null]
+  "refund_from_received_amount" json
+  "refund_from_transaction_fee" json
+  "total_refunded_amount" json
+  "refund_to_payer" json
+}
+
+Table "djpaypal_sale" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "amount" json [not null]
+  "payment_mode" VARCHAR(255) [not null]
+  "state" VARCHAR(255) [not null]
+  "reason_code" VARCHAR(255) [not null]
+  "protection_eligibility" VARCHAR(255) [not null]
+  "protection_eligibility_type" VARCHAR(255) [not null]
+  "clearing_time" timestamp(0) [not null]
+  "transaction_fee" json
+  "receivable_amount" json
+  "exchange_rate" VARCHAR(255) [not null]
+  "fmf_details" json
+  "receipt_id" VARCHAR(255) [not null]
+  "processor_response" json
+  "create_time" timestamp(0) [not null]
+  "update_time" timestamp(0) [not null]
+  "soft_descriptor" VARCHAR(255) [not null]
+  "billing_agreement_id" VARCHAR(255)
+  "parent_payment_id" VARCHAR(255)
+  "invoice_number" VARCHAR(255) [not null]
+  "payment_hold_reasons" json
+  "payment_hold_status" VARCHAR(255)
+}
+
+Table "djpaypal_webhookevent" {
+  "id" VARCHAR(255) [not null]
+  "livemode" BOOLEAN [not null]
+  "djpaypal_created" timestamp(0) [not null]
+  "djpaypal_updated" timestamp(0) [not null]
+  "event_version" VARCHAR(255) [not null]
+  "create_time" timestamp(0) [not null]
+  "event_type" VARCHAR(255) [not null]
+  "resource_type" VARCHAR(255) [not null]
+  "resource" json [not null]
+  "status" VARCHAR(255) [not null]
+  "summary" VARCHAR(255) [not null]
+  "transmissions" json
+}
+
+Table "djpaypal_webhookeventtrigger" {
+  "id" INTEGER [not null]
+  "remote_ip" INTEGER [not null]
+  "headers" json [not null]
+  "body" TEXT [not null]
+  "valid" BOOLEAN [not null]
+  "processed" BOOLEAN [not null]
+  "exception" VARCHAR(255) [not null]
+  "traceback" TEXT [not null]
+  "djpaypal_version" VARCHAR(255) [not null]
+  "created" timestamp(0) [not null]
+  "updated" timestamp(0) [not null]
+  "webhook_event_id" VARCHAR(255)
+}

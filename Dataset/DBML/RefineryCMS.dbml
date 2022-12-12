@@ -1,0 +1,146 @@
+Table "refinery_authentication_devise_roles" {
+  "id" INT [pk, not null, increment]
+  "title" VARCHAR(255) [not null]
+}
+
+Table "refinery_authentication_devise_roles_users" {
+  "user_id" INT [not null]
+  "role_id" INT [not null]
+}
+
+Table "refinery_authentication_devise_user_plugins" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "position" INT [not null]
+}
+
+Table "refinery_authentication_devise_users" {
+  "id" INT [pk, not null, increment]
+  "username" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "encrypted_password" VARCHAR(255) [not null]
+  "current_sign_in_at" DATETIME [not null]
+  "last_sign_in_at" DATETIME [not null]
+  "current_sign_in_ip" VARCHAR(255) [not null]
+  "last_sign_in_ip" VARCHAR(255) [not null]
+  "sign_in_count" INT [not null]
+  "remember_created_at" DATETIME [not null]
+  "reset_password_token" VARCHAR(255) [not null]
+  "reset_password_sent_at" DATETIME [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "slug" VARCHAR(255) [not null]
+  "full_name" VARCHAR(255) [not null]
+}
+
+Table "refinery_image_translations" {
+  "id" INT [pk, not null, increment]
+  "refinery_image_id" INT [not null]
+  "locale" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "image_alt" VARCHAR(255) [not null]
+  "image_title" VARCHAR(255) [not null]
+}
+
+Table "refinery_images" {
+  "id" INT [pk, not null, increment]
+  "image_mime_type" VARCHAR(255) [not null]
+  "image_name" VARCHAR(255) [not null]
+  "image_size" INT [not null]
+  "image_width" INT [not null]
+  "image_height" INT [not null]
+  "image_uid" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+}
+
+Table "refinery_page_part_translations" {
+  "id" INT [pk, not null, increment]
+  "refinery_page_part_id" INT [not null]
+  "locale" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "body" TEXT [not null]
+}
+
+Table "refinery_page_parts" {
+  "id" INT [pk, not null, increment]
+  "refinery_page_id" INT [not null]
+  "slug" VARCHAR(255) [not null]
+  "position" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "title" VARCHAR(255) [not null]
+}
+
+Table "refinery_page_translations" {
+  "id" INT [pk, not null, increment]
+  "refinery_page_id" INT [not null]
+  "locale" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "title" VARCHAR(255) [not null]
+  "custom_slug" VARCHAR(255) [not null]
+  "menu_title" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+}
+
+Table "refinery_pages" {
+  "id" INT [pk, not null, increment]
+  "parent_id" INT [not null]
+  "path" VARCHAR(255) [not null]
+  "show_in_menu" TINYINT(1) [not null]
+  "link_url" VARCHAR(255) [not null]
+  "menu_match" VARCHAR(255) [not null]
+  "deletable" TINYINT(1) [not null]
+  "draft" TINYINT(1) [not null]
+  "skip_to_first_child" TINYINT(1) [not null]
+  "lft" INT [not null]
+  "rgt" INT [not null]
+  "depth" INT [not null]
+  "view_template" VARCHAR(255) [not null]
+  "layout_template" VARCHAR(255) [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+  "children_count" INT [not null]
+}
+
+Table "refinery_resources" {
+  "id" INT [pk, not null, increment]
+  "file_mime_type" VARCHAR(255)
+  "file_name" VARCHAR(255)
+  "file_size" INT
+  "file_uid" VARCHAR(255)
+  "file_ext" VARCHAR(255)
+  "created_at" DATETIME
+  "udpated_at" DATETIME
+}
+
+Table "refinery_resource_translations" {
+  "id" INT [pk, not null, increment]
+  "resource_title" VARCHAR(255)
+  "locale" VARCHAR(255) [not null]
+  "refinery_resource_id" INT [not null]
+  "created_at" DATETIME [not null]
+  "updated_at" DATETIME [not null]
+}
+
+Ref:"refinery_authentication_devise_roles"."id" < "refinery_authentication_devise_roles_users"."role_id"
+
+Ref:"refinery_authentication_devise_users"."id" < "refinery_authentication_devise_user_plugins"."user_id"
+
+Ref:"refinery_authentication_devise_users"."id" < "refinery_authentication_devise_roles_users"."user_id"
+
+Ref:"refinery_images"."id" < "refinery_image_translations"."refinery_image_id"
+
+Ref:"refinery_page_parts"."id" < "refinery_page_part_translations"."refinery_page_part_id"
+
+Ref:"refinery_pages"."id" < "refinery_page_parts"."refinery_page_id"
+
+Ref:"refinery_pages"."id" < "refinery_page_translations"."refinery_page_id"
+
+Ref:"refinery_pages"."id" < "refinery_pages"."parent_id"
+
+Ref:"refinery_resources"."id" < "refinery_resource_translations"."refinery_resource_id"

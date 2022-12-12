@@ -1,0 +1,294 @@
+Table "actions" {
+  "id" INT [pk, not null, increment]
+  "class_name" VARCHAR(255) [not null]
+  "user_id" BIGINT [not null]
+  "username" VARCHAR(255) [not null]
+  "information" VARCHAR(255)
+  "description" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "cache" {
+  "key" VARCHAR(255) [not null]
+  "value" TEXT [not null]
+  "expiration" INT [not null]
+}
+
+Table "component_groups" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "order" INT [not null]
+  "visible" TINYINT [not null]
+  "collapsed" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "components" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "description" TEXT [not null]
+  "link" TEXT
+  "status" INT [not null]
+  "order" INT [not null]
+  "group_id" INT [not null]
+  "user_id" INT [not null]
+  "enabled" TINYINT [not null]
+  "meta" LONGTEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "deleted_at" TIMESTAMP
+}
+
+Table "failed_jobs" {
+  "id" INT [pk, not null, increment]
+  "connection" TEXT [not null]
+  "queue" TEXT [not null]
+  "payload" TEXT [not null]
+  "failed_at" TIMESTAMP [not null]
+}
+
+Table "incident_components" {
+  "id" INT [pk, not null, increment]
+  "incident_id" INT [not null]
+  "component_id" INT [not null]
+  "status_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "incident_templates" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "template" LONGTEXT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "deleted_at" TIMESTAMP
+}
+
+Table "incident_updates" {
+  "id" INT [pk, not null, increment]
+  "incident_id" INT [not null]
+  "status" INT [not null]
+  "message" LONGTEXT [not null]
+  "user_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "incidents" {
+  "id" INT [pk, not null, increment]
+  "user_id" INT
+  "component_id" INT [not null]
+  "name" VARCHAR(255) [not null]
+  "status" INT [not null]
+  "visible" TINYINT [not null]
+  "stickied" TINYINT [not null]
+  "notifications" TINYINT [not null]
+  "message" LONGTEXT [not null]
+  "occurred_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "deleted_at" TIMESTAMP
+}
+
+Table "invites" {
+  "id" INT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "claimed_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "jobs" {
+  "id" BIGINT [pk, not null, increment]
+  "queue" VARCHAR(255) [not null]
+  "payload" TEXT [not null]
+  "attempts" TINYINT [not null]
+  "reserved" TINYINT [not null]
+  "reserved_at" INT
+  "available_at" INT [not null]
+  "created_at" INT [not null]
+}
+
+Table "meta" {
+  "id" INT [pk, not null, increment]
+  "key" VARCHAR(255) [not null]
+  "value" VARCHAR(255) [not null]
+  "meta_id" INT [not null]
+  "meta_type" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "metric_points" {
+  "id" INT [pk, not null, increment]
+  "metric_id" INT [not null]
+  "value" DECIMAL(8,2) [not null]
+  "counter" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "metrics" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "suffix" VARCHAR(255) [not null]
+  "description" TEXT [not null]
+  "default_value" DECIMAL(8,2) [not null]
+  "calc_type" TINYINT [not null]
+  "display_chart" TINYINT [not null]
+  "places" INT [not null]
+  "default_view" TINYINT [not null]
+  "threshold" INT [not null]
+  "order" TINYINT [not null]
+  "visible" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "notifications" {
+  "id" CHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "notifiable_type" VARCHAR(255) [not null]
+  "notifiable_id" BIGINT [not null]
+  "data" TEXT [not null]
+  "read_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "schedule_components" {
+  "id" INT [pk, not null, increment]
+  "schedule_id" INT [not null]
+  "component_id" INT [not null]
+  "component_status" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "schedules" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "message" LONGTEXT
+  "status" TINYINT [not null]
+  "scheduled_at" TIMESTAMP [not null]
+  "completed_at" TIMESTAMP
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "deleted_at" TIMESTAMP
+}
+
+Table "sessions" {
+  "id" VARCHAR(255) [not null]
+  "user_id" INT
+  "ip_address" VARCHAR(255)
+  "user_agent" TEXT
+  "payload" TEXT [not null]
+  "last_activity" INT [not null]
+}
+
+Table "settings" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "value" LONGTEXT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "subscribers" {
+  "id" INT [pk, not null, increment]
+  "email" VARCHAR(255)
+  "verify_code" VARCHAR(255) [not null]
+  "phone_number" VARCHAR(255)
+  "slack_webhook_url" VARCHAR(255)
+  "verified_at" TIMESTAMP
+  "global" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "subscriptions" {
+  "id" INT [pk, not null, increment]
+  "subscriber_id" INT [not null]
+  "component_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "taggables" {
+  "id" INT [pk, not null, increment]
+  "tag_id" INT [not null]
+  "taggable_type" VARCHAR(255) [not null]
+  "taggable_id" BIGINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tags" {
+  "id" INT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "users" {
+  "id" INT [pk, not null, increment]
+  "username" VARCHAR(255) [not null]
+  "password" VARCHAR(255) [not null]
+  "remember_token" VARCHAR(255)
+  "google_2fa_secret" VARCHAR(255)
+  "email" VARCHAR(255) [not null]
+  "api_key" VARCHAR(255) [not null]
+  "active" TINYINT [not null]
+  "level" TINYINT [not null]
+  "welcomed" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Ref:"components"."id" < "incident_components"."component_id"
+
+Ref:"components"."id" < "incidents"."component_id"
+
+Ref:"components"."id" < "schedule_components"."component_id"
+
+Ref:"components"."id" < "subscriptions"."component_id"
+
+Ref:"component_groups"."id" < "components"."group_id"
+
+Ref:"users"."id" < "components"."user_id"
+
+Ref:"incidents"."id" < "incident_components"."incident_id"
+
+Ref:"incidents"."id" < "incident_updates"."incident_id"
+
+Ref:"incidents"."id" < "taggables"."taggable_id"
+
+Ref:"metrics"."id" < "metric_points"."metric_id"
+
+Ref:"invites"."id" < "notifications"."notifiable_id"
+
+Ref:"users"."id" < "notifications"."notifiable_id"
+
+Ref:"schedules"."id" < "schedule_components"."schedule_id"
+
+Ref:"subscribers"."id" < "subscriptions"."subscriber_id"
+
+Ref:"subscribers"."id" < "notifications"."notifiable_id"
+
+Ref:"components"."id" < "taggables"."taggable_id"
+
+Ref:"tags"."id" < "taggables"."tag_id"
+
+Ref:"users"."id" < "actions"."user_id"
+
+Ref:"users"."id" < "incident_updates"."user_id"
+
+Ref:"users"."id" < "incidents"."user_id"
+
+Ref:"users"."id" < "sessions"."user_id"

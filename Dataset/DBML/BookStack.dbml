@@ -1,0 +1,354 @@
+Table "activities" {
+  "id" INTEGER [not null]
+  "key" VARCHAR(255) [not null]
+  "extra" TEXT [not null]
+  "book_id" INTEGER [not null]
+  "user_id" INTEGER [not null]
+  "entity_id" INTEGER [not null]
+  "entity_type" VARCHAR(255) [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "api_tokens" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "token_id" VARCHAR(255) [not null]
+  "secret" VARCHAR(255) [not null]
+  "user_id" INTEGER [not null]
+  "expires_at" DATE [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "attachments" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "path" VARCHAR(255) [not null]
+  "extension" VARCHAR(255) [not null]
+  "uploaded_to" INTEGER [not null]
+  "external" SMALLINT [not null]
+  "order" INTEGER [not null]
+  "created_by" INTEGER [not null]
+  "updated_by" INTEGER [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "books" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "description" TEXT [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "created_by" INTEGER [not null]
+  "updated_by" INTEGER [not null]
+  "restricted" SMALLINT [not null]
+  "image_id" INTEGER
+}
+
+Table "bookshelves" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "description" TEXT [not null]
+  "created_by" INTEGER
+  "updated_by" INTEGER
+  "restricted" SMALLINT [not null]
+  "image_id" INTEGER
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "bookshelves_books" {
+  "bookshelf_id" INTEGER [not null]
+  "book_id" INTEGER [not null]
+  "order" INTEGER [not null]
+}
+
+Table "cache" {
+  "key" VARCHAR(255) [not null]
+  "value" TEXT [not null]
+  "expiration" INTEGER [not null]
+}
+
+Table "chapters" {
+  "id" INTEGER [not null]
+  "book_id" INTEGER [not null]
+  "slug" VARCHAR(255) [not null]
+  "name" TEXT [not null]
+  "description" TEXT [not null]
+  "priority" INTEGER [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "created_by" INTEGER [not null]
+  "updated_by" INTEGER [not null]
+  "restricted" SMALLINT [not null]
+}
+
+Table "comments" {
+  "id" INTEGER [not null]
+  "entity_id" INTEGER [not null]
+  "entity_type" VARCHAR(255) [not null]
+  "text" TEXT
+  "html" TEXT
+  "parent_id" INTEGER
+  "local_id" INTEGER
+  "created_by" INTEGER [not null]
+  "updated_by" INTEGER
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "email_confirmations" {
+  "id" INTEGER [not null]
+  "user_id" INTEGER [not null]
+  "token" VARCHAR(255) [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "entity_permissions" {
+  "id" INTEGER [not null]
+  "restrictable_id" INTEGER [not null]
+  "restrictable_type" VARCHAR(255) [not null]
+  "role_id" INTEGER [not null]
+  "action" VARCHAR(255) [not null]
+}
+
+Table "images" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "url" VARCHAR(255) [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "created_by" INTEGER [not null]
+  "updated_by" INTEGER [not null]
+  "path" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "uploaded_to" INTEGER [not null]
+}
+
+Table "joint_permissions" {
+  "id" INTEGER [not null]
+  "role_id" INTEGER [not null]
+  "entity_type" VARCHAR(255) [not null]
+  "entity_id" INTEGER [not null]
+  "action" VARCHAR(255) [not null]
+  "has_permission" SMALLINT [not null]
+  "has_permission_own" SMALLINT [not null]
+  "created_by" INTEGER [not null]
+}
+
+Table "migrations" {
+  "id" INTEGER [not null]
+  "migration" VARCHAR(255) [not null]
+  "batch" INTEGER [not null]
+}
+
+Table "page_revisions" {
+  "id" INTEGER [not null]
+  "page_id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "html" TEXT [not null]
+  "text" TEXT [not null]
+  "created_by" INTEGER [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "slug" VARCHAR(255) [not null]
+  "book_slug" VARCHAR(255) [not null]
+  "type" VARCHAR(255) [not null]
+  "markdown" TEXT [not null]
+  "summary" VARCHAR(255)
+  "revision_number" INTEGER [not null]
+}
+
+Table "pages" {
+  "id" INTEGER [not null]
+  "book_id" INTEGER [not null]
+  "chapter_id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "slug" VARCHAR(255) [not null]
+  "html" TEXT [not null]
+  "text" TEXT [not null]
+  "priority" INTEGER [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "created_by" INTEGER [not null]
+  "updated_by" INTEGER [not null]
+  "restricted" SMALLINT [not null]
+  "draft" SMALLINT [not null]
+  "markdown" TEXT [not null]
+  "revision_count" INTEGER [not null]
+  "template" SMALLINT [not null]
+}
+
+Table "password_resets" {
+  "email" VARCHAR(255) [not null]
+  "token" VARCHAR(255) [not null]
+  "created_at" timestamp(0) [not null]
+}
+
+Table "permission_role" {
+  "permission_id" INTEGER [not null]
+  "role_id" INTEGER [not null]
+}
+
+Table "role_permissions" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "display_name" VARCHAR(255)
+  "description" VARCHAR(255)
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "role_user" {
+  "user_id" INTEGER [not null]
+  "role_id" INTEGER [not null]
+}
+
+Table "roles" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "display_name" VARCHAR(255)
+  "description" VARCHAR(255)
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "system_name" VARCHAR(255) [not null]
+  "external_auth_id" VARCHAR(255) [not null]
+}
+
+Table "search_terms" {
+  "id" INTEGER [not null]
+  "term" VARCHAR(255) [not null]
+  "entity_type" VARCHAR(255) [not null]
+  "entity_id" INTEGER [not null]
+  "score" INTEGER [not null]
+}
+
+Table "sessions" {
+  "id" VARCHAR(255) [not null]
+  "user_id" INTEGER
+  "ip_address" VARCHAR(255)
+  "user_agent" TEXT
+  "payload" TEXT [not null]
+  "last_activity" INTEGER [not null]
+}
+
+Table "settings" {
+  "setting_key" VARCHAR(255) [not null]
+  "value" TEXT [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "social_accounts" {
+  "id" INTEGER [not null]
+  "user_id" INTEGER [not null]
+  "driver" VARCHAR(255) [not null]
+  "driver_id" VARCHAR(255) [not null]
+  "avatar" VARCHAR(255) [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "tags" {
+  "id" INTEGER [not null]
+  "entity_id" INTEGER [not null]
+  "entity_type" VARCHAR(255) [not null]
+  "name" VARCHAR(255) [not null]
+  "value" VARCHAR(255) [not null]
+  "order" INTEGER [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "user_invites" {
+  "id" INTEGER [not null]
+  "user_id" INTEGER [not null]
+  "token" VARCHAR(255) [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Table "users" {
+  "id" INTEGER [not null]
+  "name" VARCHAR(255) [not null]
+  "email" VARCHAR(255) [not null]
+  "password" VARCHAR(255) [not null]
+  "remember_token" VARCHAR(255)
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+  "email_confirmed" SMALLINT [not null]
+  "image_id" INTEGER [not null]
+  "external_auth_id" VARCHAR(255) [not null]
+  "system_name" VARCHAR(255)
+}
+
+Table "views" {
+  "id" INTEGER [not null]
+  "user_id" INTEGER [not null]
+  "viewable_id" INTEGER [not null]
+  "viewable_type" VARCHAR(255) [not null]
+  "views" INTEGER [not null]
+  "created_at" timestamp(0)
+  "updated_at" timestamp(0)
+}
+
+Ref:"books"."id" < "activities"."entity_id"
+
+Ref:"books"."id" < "activities"."book_id"
+
+Ref:"books"."id" < "bookshelves_books"."book_id"
+
+Ref:"books"."id" < "chapters"."book_id"
+
+Ref:"books"."id" < "pages"."book_id"
+
+Ref:"books"."id" < "tags"."entity_id"
+
+Ref:"books"."id" < "views"."viewable_id"
+
+Ref:"bookshelves"."id" < "bookshelves_books"."bookshelf_id"
+
+Ref:"bookshelves"."id" < "tags"."entity_id"
+
+Ref:"bookshelves"."id" < "activities"."entity_id"
+
+Ref:"chapters"."id" < "pages"."chapter_id"
+
+Ref:"images"."id" < "books"."image_id"
+
+Ref:"images"."id" < "bookshelves"."image_id"
+
+Ref:"images"."id" < "users"."image_id"
+
+Ref:"pages"."id" < "page_revisions"."page_id"
+
+Ref:"roles"."id" < "entity_permissions"."role_id"
+
+Ref:"roles"."id" < "joint_permissions"."role_id"
+
+Ref:"roles"."id" < "permission_role"."role_id"
+
+Ref:"roles"."id" < "role_user"."role_id"
+
+Ref:"users"."id" < "activities"."user_id"
+
+Ref:"users"."id" < "api_tokens"."user_id"
+
+Ref:"users"."id" < "email_confirmations"."user_id"
+
+Ref:"users"."id" < "role_user"."user_id"
+
+Ref:"users"."id" < "sessions"."user_id"
+
+Ref:"users"."id" < "social_accounts"."user_id"
+
+Ref:"users"."id" < "user_invites"."user_id"
+
+Ref:"users"."id" < "views"."user_id"
+
+Ref:"bookshelves"."id" < "views"."viewable_id"

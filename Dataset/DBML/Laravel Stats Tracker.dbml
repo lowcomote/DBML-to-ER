@@ -1,0 +1,278 @@
+Table "tracker_agents" {
+  "id" BIGINT [pk, not null, increment]
+  "name" MEDIUMTEXT [not null]
+  "browser" VARCHAR(255) [not null]
+  "browser_version" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "name_hash" VARCHAR(255)
+}
+
+Table "tracker_connections" {
+  "id" BIGINT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_cookies" {
+  "id" BIGINT [pk, not null, increment]
+  "uuid" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_devices" {
+  "id" BIGINT [pk, not null, increment]
+  "kind" VARCHAR(255) [not null]
+  "model" VARCHAR(255) [not null]
+  "platform" VARCHAR(255) [not null]
+  "platform_version" VARCHAR(255) [not null]
+  "is_mobile" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_domains" {
+  "id" BIGINT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_errors" {
+  "id" BIGINT [pk, not null, increment]
+  "code" VARCHAR(255) [not null]
+  "message" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_events" {
+  "id" BIGINT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_events_log" {
+  "id" BIGINT [pk, not null, increment]
+  "event_id" BIGINT [not null]
+  "class_id" BIGINT
+  "log_id" BIGINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_geoip" {
+  "id" BIGINT [pk, not null, increment]
+  "latitude" DOUBLE
+  "longitude" DOUBLE
+  "country_code" VARCHAR(255)
+  "country_code3" VARCHAR(255)
+  "country_name" VARCHAR(255)
+  "region" VARCHAR(255)
+  "city" VARCHAR(255)
+  "postal_code" VARCHAR(255)
+  "area_code" BIGINT
+  "dma_code" DOUBLE
+  "metro_code" DOUBLE
+  "continent_code" VARCHAR(255)
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_languages" {
+  "id" BIGINT [pk, not null, increment]
+  "preference" VARCHAR(255) [not null]
+  "language_range" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_log" {
+  "id" BIGINT [pk, not null, increment]
+  "session_id" BIGINT [not null]
+  "path_id" BIGINT
+  "query_id" BIGINT
+  "method" VARCHAR(255) [not null]
+  "route_path_id" BIGINT
+  "is_ajax" TINYINT [not null]
+  "is_secure" TINYINT [not null]
+  "is_json" TINYINT [not null]
+  "wants_json" TINYINT [not null]
+  "error_id" BIGINT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "referer_id" INT
+}
+
+Table "tracker_paths" {
+  "id" BIGINT [pk, not null, increment]
+  "path" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_queries" {
+  "id" BIGINT [pk, not null, increment]
+  "query" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_query_arguments" {
+  "id" BIGINT [pk, not null, increment]
+  "query_id" BIGINT [not null]
+  "argument" VARCHAR(255) [not null]
+  "value" VARCHAR(255)
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_referers" {
+  "id" BIGINT [pk, not null, increment]
+  "domain_id" BIGINT [not null]
+  "url" VARCHAR(255) [not null]
+  "host" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "medium" VARCHAR(255)
+  "source" VARCHAR(255)
+  "search_terms_hash" VARCHAR(255)
+}
+
+Table "tracker_referers_search_terms" {
+  "id" BIGINT [pk, not null, increment]
+  "referer_id" BIGINT [not null]
+  "search_term" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_route_path_parameters" {
+  "id" BIGINT [pk, not null, increment]
+  "route_path_id" BIGINT [not null]
+  "parameter" VARCHAR(255) [not null]
+  "value" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_route_paths" {
+  "id" BIGINT [pk, not null, increment]
+  "route_id" BIGINT [not null]
+  "path" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_routes" {
+  "id" BIGINT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "action" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_sessions" {
+  "id" BIGINT [pk, not null, increment]
+  "uuid" VARCHAR(255) [not null]
+  "user_id" BIGINT
+  "device_id" BIGINT
+  "agent_id" BIGINT
+  "client_ip" VARCHAR(255) [not null]
+  "referer_id" BIGINT
+  "cookie_id" BIGINT
+  "geoip_id" BIGINT
+  "is_robot" TINYINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+  "language_id" BIGINT
+}
+
+Table "tracker_sql_queries" {
+  "id" BIGINT [pk, not null, increment]
+  "sha1" VARCHAR(255) [not null]
+  "statement" TEXT [not null]
+  "time" DOUBLE [not null]
+  "connection_id" INT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_sql_queries_log" {
+  "id" BIGINT [pk, not null, increment]
+  "log_id" BIGINT [not null]
+  "sql_query_id" BIGINT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_sql_query_bindings" {
+  "id" BIGINT [pk, not null, increment]
+  "sha1" VARCHAR(255) [not null]
+  "serialized" TEXT [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_sql_query_bindings_parameters" {
+  "id" BIGINT [pk, not null, increment]
+  "sql_query_bindings_id" BIGINT
+  "name" VARCHAR(255)
+  "value" TEXT
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Table "tracker_system_classes" {
+  "id" BIGINT [pk, not null, increment]
+  "name" VARCHAR(255) [not null]
+  "created_at" TIMESTAMP
+  "updated_at" TIMESTAMP
+}
+
+Ref:"tracker_events"."id" < "tracker_events_log"."event_id"
+
+Ref:"tracker_system_classes"."id" < "tracker_events_log"."class_id"
+
+Ref:"tracker_log"."id" < "tracker_events_log"."log_id"
+
+Ref:"tracker_sessions"."id" < "tracker_log"."session_id"
+
+Ref:"tracker_paths"."id" < "tracker_log"."path_id"
+
+Ref:"tracker_queries"."id" < "tracker_log"."query_id"
+
+Ref:"tracker_route_paths"."id" < "tracker_log"."route_path_id"
+
+Ref:"tracker_errors"."id" < "tracker_log"."error_id"
+
+Ref:"tracker_queries"."id" < "tracker_query_arguments"."query_id"
+
+Ref:"tracker_domains"."id" < "tracker_referers"."domain_id"
+
+Ref:"tracker_referers"."id" < "tracker_referers_search_terms"."referer_id"
+
+Ref:"tracker_route_paths"."id" < "tracker_route_path_parameters"."route_path_id"
+
+Ref:"tracker_routes"."id" < "tracker_route_paths"."route_id"
+
+Ref:"tracker_devices"."id" < "tracker_sessions"."device_id"
+
+Ref:"tracker_agents"."id" < "tracker_sessions"."agent_id"
+
+Ref:"tracker_referers"."id" < "tracker_sessions"."referer_id"
+
+Ref:"tracker_cookies"."id" < "tracker_sessions"."cookie_id"
+
+Ref:"tracker_geoip"."id" < "tracker_sessions"."geoip_id"
+
+Ref:"tracker_languages"."id" < "tracker_sessions"."language_id"
+
+Ref:"tracker_log"."id" < "tracker_sql_queries_log"."log_id"
+
+Ref:"tracker_sql_queries"."id" < "tracker_sql_queries_log"."sql_query_id"
+
+Ref:"tracker_sql_query_bindings"."id" < "tracker_sql_query_bindings_parameters"."sql_query_bindings_id"
